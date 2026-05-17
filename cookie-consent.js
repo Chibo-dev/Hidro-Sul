@@ -74,7 +74,7 @@
       '.hs-cc-banner-text{flex:1;font-size:13.5px;line-height:1.6;color:#c5cdd6;}' +
       ".hs-cc-banner-text strong{display:block;font-family:'Archivo',sans-serif;font-size:15px;" +
         'font-weight:700;color:#fff;margin-bottom:4px;letter-spacing:-0.01em;}' +
-      '.hs-cc-banner-text a{color:#25D366;text-decoration:none;}' +
+      '.hs-cc-banner-text a{color:#25D366;text-decoration:underline;}' +
       '.hs-cc-banner-text a:hover{text-decoration:underline;}' +
       '.hs-cc-banner-actions{display:flex;gap:10px;flex-shrink:0;}' +
       ".hs-cc-btn{font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:13.5px;" +
@@ -124,7 +124,7 @@
       '.hs-cc-prefs-link{background:none;border:none;padding:0;margin:0;' +
         "font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:12px;color:#c5cdd6;cursor:pointer;}" +
       '.hs-cc-prefs-link:hover{color:#fff;}' +
-      '.footer-bottom span a,.footer-bottom span button{display:inline-block;padding:8px 10px;}' +
+      '.footer-bottom span a,.footer-bottom span button{display:inline-block;padding:8px 10px;text-decoration:underline !important;}' +
       '@media (max-width:720px){' +
         '.hs-cc-banner-inner{flex-direction:column;align-items:stretch;gap:16px;}' +
         '.hs-cc-banner-actions{flex-direction:column;}' +
@@ -151,7 +151,7 @@
           '<strong>Este site usa cookies</strong>' +
           'Utilizamos cookies para garantir o funcionamento do site e melhorar a sua ' +
           'experiência. Você pode aceitar todos, recusar os não essenciais ou personalizar ' +
-          'as suas preferências. Veja a <a href="politica-de-cookies.html">Política de Cookies</a>.' +
+          'as suas preferências. Veja a <a href="politica-de-cookies">Política de Cookies</a>.' +
         '</div>' +
         '<div class="hs-cc-banner-actions">' +
           '<button type="button" class="hs-cc-btn hs-cc-btn-ghost" data-cc="customize">Personalizar</button>' +
@@ -188,7 +188,7 @@
       '<div class="hs-cc-modal-body">' +
         '<p class="hs-cc-modal-intro">Escolha quais categorias de cookies deseja permitir. ' +
         'Os cookies estritamente necessários estão sempre ativos. Saiba mais na ' +
-        '<a href="politica-de-cookies.html">Política de Cookies</a>.</p>' +
+        '<a href="politica-de-cookies">Política de Cookies</a>.</p>' +
         '<div class="hs-cc-cat">' +
           '<div class="hs-cc-cat-head">' +
             '<span class="hs-cc-cat-name">Estritamente necessários</span>' +
