@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Cookies | Hidro Sul</title>
+<meta name="description" content="Política de Cookies da Hidro Sul: entenda o que são cookies, como o nosso site os utiliza e como você pode gerenciá-los a qualquer momento.">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Política de Cookies | Hidro Sul">
+<meta property="og:description" content="O que são cookies, como o site da Hidro Sul os utiliza e como você pode gerenciá-los.">
+<meta property="og:type" content="website">
+
+<link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibmplexsans-var.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Política de Cookies | Hidro Sul",
+  "description": "Política de Cookies da Hidro Sul.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hidro Sul",
+    "email": "caio@hidro-sul.com",
+    "telephone": "+5511983428297"
+  }
+}
+</script>
+
+<style>
+:root {
+  --navy-deep: #0f1d35;
+  --navy: #1a2942;
+  --navy-light: #2a3a55;
+  --silver: #c5cdd6;
+  --silver-soft: #e8edf3;
+  --white: #ffffff;
+  --green: #25D366;
+  --green-dark: #1aa84d;
+  --green-soft: #e8f9ee;
+  --danger: #c0392b;
+  --danger-soft: #fdecea;
+  --gray-50: #f7f8fa;
+  --gray-100: #eef0f3;
+  --gray-200: #d8dde4;
+  --gray-400: #8a93a0;
+  --gray-700: #404956;
+  --gray-900: #1a1f28;
+  --border: rgba(15, 29, 53, 0.08);
+  --chibo-green: #25d366;
+  --chibo-green-glow: rgba(37, 211, 102, 0.35);
+  --ig-pink: #d62977;
+  --ig-pink-glow: rgba(214, 41, 119, 0.4);
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --container: 1240px;
+  --radius: 4px;
+  --radius-lg: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--gray-900);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+/* === HEADER === */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+.logo {
+  font-family: var(--font-display); font-weight: 800; font-size: 22px;
+  letter-spacing: -0.02em; color: var(--navy-deep);
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+.logo-mark {
+  width: 28px; height: 28px; background: var(--navy-deep);
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 14px; font-weight: 800; border-radius: 2px;
+}
+.nav { display: flex; align-items: center; gap: 36px; }
+.nav-link {
+  font-family: var(--font-body); font-size: 14px; font-weight: 500;
+  color: var(--gray-700); text-decoration: none; transition: color 0.2s; position: relative;
+}
+.nav-link:hover { color: var(--navy-deep); }
+.nav-link.active { color: var(--navy-deep); font-weight: 600; }
+.nav-link.has-dropdown::after {
+  content: ''; display: inline-block; width: 0; height: 0; margin-left: 6px;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 4px solid currentColor; opacity: 0.5; transition: transform 0.2s;
+}
+.nav-item { position: relative; display: inline-flex; align-items: center; }
+.nav-item[data-open="true"] .nav-link.has-dropdown::after { transform: rotate(180deg); }
+.nav-dropdown {
+  position: absolute; top: calc(100% + 14px); left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 280px; background: white; border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 32px rgba(15, 29, 53, 0.08), 0 2px 8px rgba(15, 29, 53, 0.04);
+  padding: 8px; opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s; z-index: 110;
+}
+.nav-dropdown::before {
+  content: ''; position: absolute; top: -6px; left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px; height: 12px; background: white;
+  border-left: 1px solid var(--border); border-top: 1px solid var(--border);
+}
+.nav-item:hover .nav-dropdown,
+.nav-item[data-open="true"] .nav-dropdown,
+.nav-dropdown:focus-within {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-item::after {
+  content: ''; position: absolute; top: 100%; left: 0; right: 0;
+  height: 14px; pointer-events: none;
+}
+.nav-item:hover::after { pointer-events: auto; }
+.nav-dropdown-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 14px; border-radius: var(--radius);
+  text-decoration: none; color: var(--navy-deep); transition: background 0.15s;
+}
+.nav-dropdown-item:hover, .nav-dropdown-item:focus-visible { background: var(--gray-50); outline: none; }
+.nav-dropdown-item.featured { background: var(--navy-deep); color: white; }
+.nav-dropdown-item.featured:hover, .nav-dropdown-item.featured:focus-visible { background: var(--navy); }
+.nav-dropdown-icon {
+  width: 32px; height: 32px; flex-shrink: 0; border-radius: var(--radius);
+  background: var(--gray-100); display: flex; align-items: center; justify-content: center;
+  color: var(--navy);
+}
+.nav-dropdown-item.featured .nav-dropdown-icon { background: rgba(37, 211, 102, 0.15); color: var(--green); }
+.nav-dropdown-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.nav-dropdown-title {
+  font-family: var(--font-display); font-weight: 600; font-size: 14px;
+  letter-spacing: -0.01em; line-height: 1.3;
+}
+.nav-dropdown-desc { font-size: 12px; color: var(--gray-400); line-height: 1.4; }
+.nav-dropdown-item.featured .nav-dropdown-desc { color: var(--silver); }
+.nav-dropdown-badge {
+  display: inline-block; margin-left: 8px; padding: 2px 6px;
+  background: var(--green); color: var(--navy-deep);
+  font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+  border-radius: 2px; vertical-align: middle; text-transform: uppercase;
+}
+
+/* === BOTÕES === */
+.btn-primary {
+  background: var(--green); color: var(--navy-deep);
+  font-family: var(--font-body); font-weight: 600; font-size: 14px;
+  padding: 10px 18px; border: none; border-radius: var(--radius);
+  text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.2s; cursor: pointer;
+}
+.btn-primary:hover { background: var(--green-dark); color: white; transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent; color: var(--silver-soft);
+  font-family: var(--font-body); font-weight: 500; font-size: 14px;
+  padding: 10px 18px; border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;
+}
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.5); }
+
+/* === BREADCRUMB === */
+.breadcrumb { background: var(--gray-50); border-bottom: 1px solid var(--border); padding: 14px 0; }
+.breadcrumb-list {
+  display: flex; align-items: center; gap: 8px; list-style: none;
+  font-size: 13px; color: var(--gray-400);
+}
+.breadcrumb-list a { color: var(--gray-700); text-decoration: none; transition: color 0.2s; }
+.breadcrumb-list a:hover { color: var(--navy-deep); }
+.breadcrumb-list .separator { color: var(--gray-200); }
+.breadcrumb-list .current { color: var(--navy-deep); font-weight: 500; }
+
+/* === PAGE HERO === */
+.page-hero {
+  background: var(--navy-deep); color: white;
+  padding: 64px 0 72px; position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; top: 0; right: -10%; width: 60%; height: 100%;
+  background:
+    linear-gradient(135deg, transparent 0%, transparent 49%, rgba(255,255,255,0.015) 50%, transparent 51%),
+    repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(197, 205, 214, 0.03) 80px, rgba(197, 205, 214, 0.03) 81px),
+    repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(197, 205, 214, 0.03) 80px, rgba(197, 205, 214, 0.03) 81px);
+  pointer-events: none;
+}
+.page-hero-inner { position: relative; z-index: 2; max-width: 800px; }
+.page-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body); font-size: 13px; font-weight: 500;
+  color: var(--silver); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 24px;
+}
+.page-hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--silver); }
+.page-hero h1 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(32px, 4vw, 46px); line-height: 1.08;
+  letter-spacing: -0.025em; color: white; margin-bottom: 20px;
+}
+.page-hero-lead {
+  font-size: 18px; line-height: 1.6; color: var(--silver); max-width: 660px;
+}
+.legal-hero-meta {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 24px; padding: 8px 16px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50px; font-size: 13px; color: var(--silver);
+}
+.legal-hero-meta svg { color: var(--green); }
+
+/* === LEGAL LAYOUT === */
+.legal-section { background: white; padding: 72px 0 96px; }
+.legal-grid {
+  display: grid; grid-template-columns: 264px 1fr;
+  gap: 56px; align-items: start;
+}
+.legal-toc {
+  position: sticky; top: 96px;
+  background: var(--gray-50); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 24px;
+}
+.legal-toc-title {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--navy-deep); margin-bottom: 8px;
+}
+.legal-toc-list { list-style: none; }
+.legal-toc-list li { border-top: 1px solid var(--border); }
+.legal-toc-list a {
+  display: block; padding: 9px 0;
+  font-size: 13px; line-height: 1.4; color: var(--gray-700);
+  text-decoration: none; transition: color 0.2s;
+}
+.legal-toc-list a:hover { color: var(--green-dark); }
+
+.legal-content { min-width: 0; }
+.legal-intro {
+  font-size: 17px; line-height: 1.7; color: var(--gray-700);
+  padding-bottom: 28px; border-bottom: 1px solid var(--border);
+}
+.legal-block { padding-top: 36px; }
+.legal-block h2 {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 23px; letter-spacing: -0.015em; line-height: 1.3;
+  color: var(--navy-deep); margin-bottom: 16px;
+  scroll-margin-top: 92px;
+}
+.legal-block h3 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 17px; color: var(--navy-deep); margin: 24px 0 10px;
+}
+.legal-block p {
+  font-size: 15px; line-height: 1.75; color: var(--gray-700); margin-bottom: 14px;
+}
+.legal-block p:last-child { margin-bottom: 0; }
+.legal-block ul { list-style: none; margin: 14px 0 18px; display: flex; flex-direction: column; gap: 10px; }
+.legal-block ul li {
+  position: relative; padding-left: 24px;
+  font-size: 15px; line-height: 1.65; color: var(--gray-700);
+}
+.legal-block ul li::before {
+  content: ''; position: absolute; left: 4px; top: 9px;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--green-dark);
+}
+.legal-block a {
+  color: var(--green-dark); text-decoration: none; font-weight: 500;
+  border-bottom: 1px solid rgba(26,168,77,0.3);
+}
+.legal-block a:hover { border-bottom-color: var(--green-dark); }
+.legal-block strong { color: var(--navy-deep); font-weight: 600; }
+
+.legal-deflist { display: flex; flex-direction: column; gap: 12px; margin: 16px 0 18px; }
+.legal-defitem {
+  background: var(--gray-50); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px;
+}
+.legal-defitem-term {
+  font-family: var(--font-display); font-weight: 600; font-size: 15px;
+  color: var(--navy-deep); margin-bottom: 4px;
+}
+.legal-defitem-desc { font-size: 14px; line-height: 1.6; color: var(--gray-700); }
+
+.legal-placeholder {
+  background: var(--danger-soft); color: var(--danger);
+  font-weight: 600; font-size: 0.92em;
+  padding: 1px 6px; border-radius: 2px;
+}
+
+.legal-contact {
+  margin-top: 44px; padding: 32px 34px;
+  background: var(--navy-deep); border-radius: var(--radius-lg);
+  color: white; scroll-margin-top: 92px;
+}
+.legal-contact h2 {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 21px; letter-spacing: -0.015em; color: white; margin-bottom: 8px;
+}
+.legal-contact p { font-size: 14px; color: var(--silver); line-height: 1.6; margin-bottom: 20px; }
+.legal-contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.legal-related { margin-top: 36px; }
+.legal-related-title {
+  font-family: var(--font-display); font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--navy-deep); margin-bottom: 14px;
+}
+.legal-related-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.legal-related-card {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 18px; background: var(--gray-50);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  text-decoration: none; transition: all 0.2s;
+}
+.legal-related-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+.legal-related-card svg { color: var(--navy); flex-shrink: 0; }
+.legal-related-card span {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 14px; color: var(--navy-deep);
+}
+
+/* === FOOTER === */
+.footer { background: #0a1424; color: var(--silver); padding: 60px 0 32px; font-size: 14px; }
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 48px;
+}
+.footer-brand .logo { color: white; margin-bottom: 16px; }
+.footer-tagline { font-size: 14px; color: var(--silver); line-height: 1.6; max-width: 280px; }
+.footer-title {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 12px; text-transform: uppercase;
+  letter-spacing: 0.15em; color: white; margin-bottom: 20px;
+}
+.footer-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-list a { color: var(--silver); text-decoration: none; transition: color 0.2s; font-size: 13px; }
+.footer-list a:hover { color: white; }
+.footer-bottom {
+  padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--gray-400);
+}
+.footer-signature {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 12px; color: var(--gray-400);
+}
+.footer-signature-label { color: var(--silver); font-weight: 400; }
+.footer-signature a {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--silver-soft); text-decoration: none;
+  padding: 4px 10px; border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 50px; transition: all 0.3s ease;
+  background: transparent; font-weight: 500;
+}
+.footer-signature a:hover { transform: translateY(-1px); background: rgba(255,255,255,0.03); }
+.footer-signature a.is-chibo:hover {
+  color: var(--chibo-green); border-color: rgba(37, 211, 102, 0.4);
+  box-shadow: 0 0 12px var(--chibo-green-glow);
+}
+.footer-signature a.is-chibo .chibo-monogram {
+  font-family: var(--font-display); font-weight: 800;
+  letter-spacing: -0.02em; display: inline-flex; align-items: center;
+}
+.footer-signature a.is-chibo .chibo-dot { color: var(--chibo-green); transition: filter 0.3s ease; }
+.footer-signature a.is-chibo:hover .chibo-dot { filter: drop-shadow(0 0 4px var(--chibo-green-glow)); }
+.footer-signature a.is-ig:hover { color: var(--ig-pink); border-color: rgba(214, 41, 119, 0.4); }
+.footer-signature a.is-ig:hover .ig-icon { filter: drop-shadow(0 0 6px var(--ig-pink-glow)); }
+.footer-signature .ig-icon { transition: filter 0.3s ease; }
+.footer-signature-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.12); flex-shrink: 0; }
+
+/* === WHATSAPP FLOAT === */
+.wa-float {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 56px; height: 56px; background: var(--green);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  z-index: 99; text-decoration: none; transition: transform 0.2s;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 28px; height: 28px; fill: white; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .legal-grid { grid-template-columns: 1fr; gap: 28px; }
+  .legal-toc { position: static; }
+  .legal-related-list { grid-template-columns: 1fr; }
+  .page-hero { padding: 52px 0 60px; }
+  .legal-section { padding: 56px 0 72px; }
+}
+
+/* ===== HEADER · Contato em destaque + navegação responsiva ===== */
+.nav-dropdown::before { display: none; }
+.nav-cta {
+  font-family: var(--font-body); font-weight: 600; font-size: 14px;
+  color: var(--navy-deep); background: var(--green);
+  padding: 10px 20px; border-radius: var(--radius); text-decoration: none;
+  white-space: nowrap; transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.nav-cta:hover { background: var(--green-dark); color: var(--white); transform: translateY(-1px); }
+.nav-link:focus-visible, .nav-cta:focus-visible,
+.nav-dropdown-item:focus-visible, .nav-toggle:focus-visible {
+  outline: 2px solid var(--navy); outline-offset: 3px; border-radius: 2px;
+}
+.nav-toggle {
+  display: none; width: 44px; height: 44px; margin: -6px 0; padding: 0;
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  background: none; border: none; cursor: pointer;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 2px; border-radius: 2px;
+  background: var(--navy-deep); transition: transform 0.25s ease, opacity 0.2s ease;
+}
+@media (max-width: 900px) {
+  .header { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .logo, .nav-toggle { position: relative; z-index: 96; }
+  .header-inner { padding: 14px 0; }
+  .nav-toggle { display: flex; }
+  .hs-nav-open { overflow: hidden; }
+  .nav {
+    display: flex; position: fixed; inset: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--white); padding: 84px 24px 40px;
+    overflow-y: auto; z-index: 95;
+    transform: translateX(100%); visibility: hidden;
+    transition: transform 0.3s ease, visibility 0s linear 0.3s;
+  }
+  .hs-nav-open .nav {
+    transform: translateX(0); visibility: visible;
+    transition: transform 0.3s ease, visibility 0s;
+  }
+  .hs-nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hs-nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .hs-nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-link {
+    padding: 15px 4px; font-size: 16px; color: var(--navy-deep);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-item { display: block; }
+  .nav-item .nav-link.has-dropdown { display: block; }
+  .nav-dropdown {
+    position: static; transform: none;
+    opacity: 1; visibility: visible; pointer-events: auto;
+    width: auto; min-width: 0; padding: 4px 0 14px;
+    background: transparent; border: none; box-shadow: none;
+  }
+  .nav-dropdown-item { padding: 12px; }
+  .nav-dropdown-item.featured { background: var(--gray-50); color: var(--navy-deep); }
+  .nav-dropdown-item.featured .nav-dropdown-icon { background: var(--gray-100); color: var(--navy); }
+  .nav-dropdown-item.featured .nav-dropdown-desc { color: var(--gray-400); }
+  .nav-cta { margin-top: 20px; text-align: center; padding: 15px 20px; font-size: 15px; }
+}
+
+/* ===== Fontes self-hosted (variáveis) ===== */
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/archivo-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:100 700;font-display:swap;src:url('fonts/ibmplexsans-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+/* ===== Contraste (WCAG AA) ===== */
+:root { --gray-400: #5f6775; }
+.footer-bottom, .footer-signature, .aside-channel-label { color: #8a93a0; }
+.breadcrumb-list .separator { color: var(--gray-400); }
+.legal-block a, .faq-a a, .form-note a, .tech-card-tag,
+.timeline-year, .faq-q::after, .commitment-number,
+.faq-q:hover, .legal-toc-list a:hover { color: #15722f; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">H</span>
+        HIDRO SUL
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="quem-somos.html" class="nav-link">Quem somos</a>
+        <div class="nav-item" data-dropdown>
+          <a href="individualizacao-agua-gas.html" class="nav-link has-dropdown" aria-haspopup="true" aria-expanded="false" id="services-trigger">Serviços</a>
+          <div class="nav-dropdown" role="menu" aria-labelledby="services-trigger">
+            <a href="individualizacao-agua-gas.html" class="nav-dropdown-item featured" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Individualização de água e gás<span class="nav-dropdown-badge">Principal</span></span>
+                <span class="nav-dropdown-desc">Frente técnica especializada da Hidro Sul</span>
+              </span>
+            </a>
+            <a href="instalacao-predial.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7v14M21 7v14M6 11h.01M6 15h.01M6 19h.01M10 11h.01M10 15h.01M10 19h.01M14 11h.01M14 15h.01M14 19h.01M18 11h.01M18 15h.01M18 19h.01M5 7l7-4 7 4"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Instalação predial</span>
+                <span class="nav-dropdown-desc">Obras hidráulicas complementares</span>
+              </span>
+            </a>
+            <a href="reformas.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Reformas</span>
+                <span class="nav-dropdown-desc">Adequações em condomínios atendidos</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="parceiros.html" class="nav-link">Parceiros</a>
+        <a href="contato.html" class="nav-cta">Contato</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list">
+      <li><a href="index.html">Home</a></li>
+      <li class="separator">/</li>
+      <li class="current">Política de Cookies</li>
+    </ol>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-hero-eyebrow">Uso de cookies</div>
+      <h1>Política de Cookies</h1>
+      <p class="page-hero-lead">Entenda o que são cookies, como e por que este site os utiliza, e como você pode gerenciá-los a qualquer momento.</p>
+      <div class="legal-hero-meta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Última atualização: 16 de maio de 2026
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGAL CONTENT -->
+<section class="legal-section">
+  <div class="container">
+    <div class="legal-grid">
+
+      <!-- TOC -->
+      <aside class="legal-toc">
+        <div class="legal-toc-title">Nesta página</div>
+        <ul class="legal-toc-list">
+          <li><a href="#o-que-sao">1. O que são cookies</a></li>
+          <li><a href="#por-que">2. Por que utilizamos cookies</a></li>
+          <li><a href="#tipos">3. Tipos de cookies</a></li>
+          <li><a href="#terceiros">4. Cookies de terceiros</a></li>
+          <li><a href="#dados-pessoais">5. Cookies e dados pessoais</a></li>
+          <li><a href="#gerenciar">6. Como gerenciar cookies</a></li>
+          <li><a href="#consequencias">7. Consequências de desativar</a></li>
+          <li><a href="#alteracoes">8. Alterações nesta Política</a></li>
+          <li><a href="#contato">Dúvidas e contato</a></li>
+        </ul>
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="legal-content">
+        <p class="legal-intro">Esta Política de Cookies explica o uso de cookies e tecnologias semelhantes no site da Hidro Sul. Ela complementa a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a> e deve ser lida em conjunto com ela.</p>
+
+        <div class="legal-block">
+          <h2 id="o-que-sao">1. O que são cookies</h2>
+          <p>Cookies são pequenos arquivos de texto que um site armazena no seu navegador ou dispositivo quando você o visita. Eles permitem que o site reconheça o seu dispositivo, lembre de preferências e funcione de forma mais eficiente.</p>
+          <p>Além dos cookies, existem outras tecnologias semelhantes, como o armazenamento local (<em>local storage</em>) e pixels, que cumprem funções parecidas e estão igualmente abrangidas por esta política.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2 id="por-que">2. Por que utilizamos cookies</h2>
+          <p>Utilizamos cookies e tecnologias semelhantes para:</p>
+          <ul>
+            <li>Garantir o funcionamento técnico adequado do site;</li>
+            <li>Lembrar preferências e melhorar a sua experiência de navegação;</li>
+            <li>Entender, de forma agregada, como os visitantes utilizam o site;</li>
+            <li>Manter a segurança e a integridade da navegação.</li>
+          </ul>
+          <p>O site da Hidro Sul tem caráter institucional e informativo, e o uso de cookies é mantido no mínimo necessário.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2 id="tipos">3. Tipos de cookies que utilizamos</h2>
+          <p>Os cookies podem ser classificados nas seguintes categorias:</p>
+          <div class="legal-deflist">
+            <div class="legal-defitem">
+              <div class="legal-defitem-term">Cookies estritamente necessários</div>
+              <div class="legal-defitem-desc">Essenciais para o funcionamento do site e para a segurança da navegação. Incluem o registro da sua preferência de cookies, guardado para que não seja preciso repetir a escolha a cada visita. Por serem indispensáveis, não dependem de consentimento.</div>
+            </div>
+            <div class="legal-defitem">
+              <div class="legal-defitem-term">Cookies de desempenho e análise</div>
+              <div class="legal-defitem-desc">Coletam informações agregadas e anônimas sobre como os visitantes utilizam o site — como páginas mais acessadas e tempo de permanência — ajudando a melhorar o conteúdo. Podem ser utilizados caso ferramentas de análise sejam habilitadas.</div>
+            </div>
+            <div class="legal-defitem">
+              <div class="legal-defitem-term">Cookies de funcionalidade</div>
+              <div class="legal-defitem-desc">Permitem que o site lembre escolhas feitas por você, oferecendo uma experiência de navegação mais personalizada.</div>
+            </div>
+          </div>
+          <p>Atualmente, o site <strong>não utiliza cookies para fins de publicidade ou marketing direcionado</strong>. Caso isso venha a mudar, esta política será atualizada.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2 id="terceiros">4. Cookies de terceiros</h2>
+          <p>Alguns recursos do site envolvem serviços de terceiros, que podem definir os seus próprios cookies ou coletar dados de navegação:</p>
+          <ul>
+            <li><strong>WhatsApp / Meta</strong> — ao clicar nos botões de WhatsApp, você é direcionado para a plataforma WhatsApp, que possui as suas próprias políticas de privacidade e de cookies.</li>
+          </ul>
+          <p>As fontes tipográficas utilizadas no site são hospedadas no próprio servidor, sem requisições a serviços externos de fontes. A Hidro Sul não controla os cookies definidos por terceiros como o WhatsApp — recomendamos a consulta às políticas de privacidade desses serviços.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2 id="dados-pessoais">5. Cookies e dados pessoais</h2>
+          <p>Alguns cookies podem coletar informações que, isoladamente ou combinadas com outras, são consideradas dados pessoais. O tratamento desses dados é realizado conforme a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a> e a Lei Geral de Proteção de Dados (LGPD).</p>
+        </div>
+
+        <div class="legal-block">
+          <h2 id="gerenciar">6. Como gerenciar e desativar cookies</h2>
+          <h3>Pelo painel de preferências do site</h3>
+          <p>No seu primeiro acesso, o site exibe um aviso de cookies no qual você pode <strong>aceitar todos</strong>, <strong>recusar os não essenciais</strong> ou <strong>personalizar</strong> a sua escolha por categoria. Os cookies que dependem de consentimento só são ativados após a sua autorização expressa.</p>
+          <p>Você pode rever ou alterar essa decisão a qualquer momento pelo link <strong>“Preferências de cookies”</strong>, disponível no rodapé de todas as páginas. A sua escolha fica registrada no seu navegador para que não seja necessário repeti-la a cada visita.</p>
+          <h3>Pelas configurações do navegador</h3>
+          <p>Você também pode controlar, bloquear ou excluir cookies diretamente no seu navegador. Os procedimentos variam conforme o navegador utilizado:</p>
+          <ul>
+            <li><strong>Google Chrome</strong> — Configurações &rsaquo; Privacidade e segurança &rsaquo; Cookies e outros dados do site;</li>
+            <li><strong>Mozilla Firefox</strong> — Configurações &rsaquo; Privacidade e Segurança &rsaquo; Cookies e dados de sites;</li>
+            <li><strong>Microsoft Edge</strong> — Configurações &rsaquo; Cookies e permissões de site;</li>
+            <li><strong>Safari</strong> — Preferências &rsaquo; Privacidade.</li>
+          </ul>
+          <p>A maioria dos navegadores também oferece um modo de navegação anônima ou privativa, que limita o armazenamento de cookies.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2 id="consequencias">7. Consequências de desativar cookies</h2>
+          <p>Você é livre para recusar ou desativar cookies. No entanto, ao bloquear cookies estritamente necessários, algumas partes ou funcionalidades do site podem não funcionar como esperado.</p>
+          <p>A desativação de cookies de desempenho e de funcionalidade não impede o uso do site, mas pode afetar a sua experiência de navegação.</p>
+        </div>
+
+        <div class="legal-block">
+          <h2 id="alteracoes">8. Alterações nesta Política</h2>
+          <p>Esta Política de Cookies pode ser atualizada a qualquer momento para refletir mudanças tecnológicas, legais ou na forma como utilizamos cookies. A versão vigente é sempre a publicada nesta página, com a data da última atualização.</p>
+        </div>
+
+        <!-- CONTACT BOX -->
+        <div class="legal-contact" id="contato">
+          <h2>Dúvidas sobre esta Política?</h2>
+          <p>Se você tiver qualquer dúvida sobre esta Política de Cookies ou sobre o tratamento dos seus dados, fale com a gente. Teremos prazer em ajudar.</p>
+          <div class="legal-contact-links">
+            <a href="mailto:caio@hidro-sul.com" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              caio@hidro-sul.com
+            </a>
+            <a href="https://wa.me/5511983428297" class="btn-secondary" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- RELATED -->
+        <div class="legal-related">
+          <div class="legal-related-title">Documentos relacionados</div>
+          <div class="legal-related-list">
+            <a href="politica-de-privacidade.html" class="legal-related-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Política de Privacidade</span>
+            </a>
+            <a href="termos-de-uso.html" class="legal-related-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Termos de Uso</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">H</span>
+          HIDRO SUL
+        </a>
+        <p class="footer-tagline">A base sólida para a sua tecnologia. Especialistas em individualização de água e gás na Grande São Paulo.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Serviços</h4>
+        <ul class="footer-list">
+          <li><a href="individualizacao-agua-gas.html">Individualização de água</a></li>
+          <li><a href="individualizacao-agua-gas.html">Individualização de gás</a></li>
+          <li><a href="instalacao-predial.html">Instalação predial</a></li>
+          <li><a href="reformas.html">Reformas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Empresa</h4>
+        <ul class="footer-list">
+          <li><a href="quem-somos.html">Quem somos</a></li>
+          <li><a href="parceiros.html">Parceiros</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contato</h4>
+        <ul class="footer-list">
+          <li><a href="tel:+5511983428297">11 98342-8297</a></li>
+          <li><a href="mailto:caio@hidro-sul.com">caio@hidro-sul.com</a></li>
+          <li>Grande São Paulo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Hidro Sul. Todos os direitos reservados. · <a href="politica-de-privacidade.html" style="color: var(--silver); text-decoration: none;">Política de Privacidade</a> · <a href="politica-de-cookies.html" style="color: var(--silver); text-decoration: none;">Política de Cookies</a> · <a href="termos-de-uso.html" style="color: var(--silver); text-decoration: none;">Termos de Uso</a></span>
+      <div class="footer-signature">
+        <span class="footer-signature-label">Desenvolvido por</span>
+        <a href="https://chibodev.com" target="_blank" rel="noopener" class="is-chibo">
+          <span class="chibo-monogram">C<span class="chibo-dot">.</span></span>
+          <span>Chibo Dev</span>
+        </a>
+        <span class="footer-signature-divider"></span>
+        <a href="https://instagram.com/chibodev" target="_blank" rel="noopener" class="is-ig" aria-label="Instagram Chibo Dev">
+          <svg class="ig-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>@chibodev</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5511983428297" class="wa-float" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  (function() {
+    const dropdowns = document.querySelectorAll('[data-dropdown]');
+    dropdowns.forEach(function(item) {
+      const trigger = item.querySelector('.nav-link.has-dropdown');
+      if (!trigger) return;
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isOpen = item.getAttribute('data-open') === 'true';
+        closeAll();
+        if (!isOpen) {
+          item.setAttribute('data-open', 'true');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+      trigger.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.setAttribute('data-open', 'true');
+          trigger.setAttribute('aria-expanded', 'true');
+          const firstItem = item.querySelector('.nav-dropdown-item');
+          if (firstItem) firstItem.focus();
+        }
+      });
+    });
+    function closeAll() {
+      dropdowns.forEach(function(item) {
+        item.setAttribute('data-open', 'false');
+        const trigger = item.querySelector('.nav-link.has-dropdown');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAll(); });
+    document.addEventListener('click', function(e) { if (!e.target.closest('[data-dropdown]')) closeAll(); });
+  })();
+</script>
+
+<script src="cookie-consent.js" defer></script>
+</body>
+</html>

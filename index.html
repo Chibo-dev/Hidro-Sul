@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidro Sul | Individualização de Água e Gás na Grande São Paulo</title>
+<meta name="description" content="Especialistas em individualização de água e gás na Grande São Paulo. Equipe própria CLT, seguro de obra e 300.000+ medidores instalados. O braço técnico da sua engenharia de vendas.">
+<meta name="keywords" content="individualização de água, individualização de gás, instalação de medidores, hidráulica predial, condomínio, construtora, São Paulo">
+
+<meta property="og:title" content="Hidro Sul | Individualização de Água e Gás">
+<meta property="og:description" content="O braço técnico da sua engenharia de vendas. Equipe própria, seguro de obra, 20+ anos de experiência exclusiva em individualização.">
+<meta property="og:type" content="website">
+
+<link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibmplexsans-var.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Hidro Sul",
+  "description": "Especialistas em individualização de água e gás",
+  "areaServed": "Grande São Paulo",
+  "telephone": "+5511983428297",
+  "email": "caio@hidro-sul.com",
+  "priceRange": "$$$"
+}
+</script>
+
+<style>
+:root {
+  --navy-deep: #0f1d35;
+  --navy: #1a2942;
+  --navy-light: #2a3a55;
+  --silver: #c5cdd6;
+  --silver-soft: #e8edf3;
+  --white: #ffffff;
+  --green: #25D366;
+  --green-dark: #1aa84d;
+  --green-soft: #e8f9ee;
+  --danger: #c0392b;
+  --danger-soft: #fdecea;
+  --gray-50: #f7f8fa;
+  --gray-100: #eef0f3;
+  --gray-200: #d8dde4;
+  --gray-400: #8a93a0;
+  --gray-700: #404956;
+  --gray-900: #1a1f28;
+  --border: rgba(15, 29, 53, 0.08);
+  --chibo-green: #25d366;
+  --chibo-green-glow: rgba(37, 211, 102, 0.35);
+  --ig-pink: #d62977;
+  --ig-pink-glow: rgba(214, 41, 119, 0.4);
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --container: 1240px;
+  --radius: 4px;
+  --radius-lg: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--gray-900);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === HEADER === */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--navy-deep);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 28px;
+  height: 28px;
+  background: var(--navy-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 2px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-link:hover { color: var(--navy-deep); }
+
+.nav-link.has-dropdown::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  opacity: 0.5;
+  transition: transform 0.2s;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item[data-open="true"] .nav-link.has-dropdown::after {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 280px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 32px rgba(15, 29, 53, 0.08), 0 2px 8px rgba(15, 29, 53, 0.04);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  z-index: 110;
+}
+
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item[data-open="true"] .nav-dropdown,
+.nav-dropdown:focus-within {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Bridge invisível entre link e dropdown para evitar fechar no movimento */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 14px;
+  pointer-events: none;
+}
+
+.nav-item:hover::after { pointer-events: auto; }
+
+.nav-dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--navy-deep);
+  transition: background 0.15s;
+}
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus-visible {
+  background: var(--gray-50);
+  outline: none;
+}
+
+.nav-dropdown-item.featured {
+  background: var(--navy-deep);
+  color: white;
+}
+
+.nav-dropdown-item.featured:hover,
+.nav-dropdown-item.featured:focus-visible {
+  background: var(--navy);
+}
+
+.nav-dropdown-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+}
+
+.nav-dropdown-item.featured .nav-dropdown-icon {
+  background: rgba(37, 211, 102, 0.15);
+  color: var(--green);
+}
+
+.nav-dropdown-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.nav-dropdown-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.nav-dropdown-desc {
+  font-size: 12px;
+  color: var(--gray-400);
+  line-height: 1.4;
+}
+
+.nav-dropdown-item.featured .nav-dropdown-desc { color: var(--silver); }
+
+.nav-dropdown-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  background: var(--green);
+  color: var(--navy-deep);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--navy-deep);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--silver-soft);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-dark {
+  background: var(--navy-deep);
+  color: white;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-dark:hover { background: var(--navy); transform: translateY(-1px); }
+
+/* === HERO === */
+.hero {
+  background: var(--navy-deep);
+  color: white;
+  padding: 80px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 60%;
+  height: 100%;
+  background:
+    linear-gradient(135deg, transparent 0%, transparent 49%, rgba(255,255,255,0.015) 50%, transparent 51%),
+    repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(197, 205, 214, 0.03) 80px, rgba(197, 205, 214, 0.03) 81px),
+    repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(197, 205, 214, 0.03) 80px, rgba(197, 205, 214, 0.03) 81px);
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--silver);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--silver);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.hero h1 .accent {
+  color: var(--green);
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--silver);
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.hero-trust {
+  display: flex;
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-trust-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-trust-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.hero-trust-label {
+  font-size: 12px;
+  color: var(--silver);
+  font-weight: 400;
+}
+
+.hero-image {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.placeholder-icon {
+  width: 48px;
+  height: 48px;
+  border: 2px dashed rgba(197, 205, 214, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--silver);
+}
+
+.placeholder-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--silver);
+  margin-bottom: 6px;
+}
+
+.placeholder-desc {
+  font-size: 12px;
+  color: rgba(197, 205, 214, 0.65);
+  max-width: 200px;
+  line-height: 1.5;
+}
+
+.hero-image-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(15, 29, 53, 0.85);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* === SECTION BASE === */
+.section {
+  padding: 100px 0;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--navy);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--navy-deep);
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--gray-700);
+  max-width: 700px;
+  margin-bottom: 56px;
+}
+
+/* === ESCALA / STATS === */
+.stats-section {
+  background: var(--gray-50);
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.stat {
+  padding: 0 40px;
+  border-left: 1px solid var(--border);
+}
+
+.stat:first-child { border-left: none; padding-left: 0; }
+
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--navy-deep);
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-size: 15px;
+  color: var(--gray-700);
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+/* === PROBLEMA === */
+.problem-section { background: white; }
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.problem-card {
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.problem-card.venda {
+  background: var(--gray-50);
+  border: 1px solid var(--border);
+}
+
+.problem-card.risco {
+  background: var(--navy-deep);
+  color: white;
+}
+
+.problem-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.problem-card.venda .problem-label { color: var(--navy); }
+.problem-card.risco .problem-label { color: var(--green); }
+
+.problem-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.problem-card.venda .problem-headline { color: var(--navy-deep); }
+.problem-card.risco .problem-headline { color: white; }
+
+.problem-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.problem-card.venda .problem-text { color: var(--gray-700); }
+.problem-card.risco .problem-text { color: var(--silver); }
+
+.problem-image {
+  margin-top: auto;
+  aspect-ratio: 16/9;
+  background: rgba(0,0,0,0.04);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.problem-image svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.problem-image--meter { background: #fafbfc; }
+.problem-image--issue { background: var(--navy-deep); border: 1px solid rgba(255,255,255,0.06); }
+
+.problem-card.risco .problem-image {
+  background: rgba(255,255,255,0.05);
+  border: 1px dashed rgba(255,255,255,0.15);
+}
+
+.problem-card.risco .problem-image--issue {
+  background: var(--navy-deep);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.problem-conclusion {
+  margin-top: 56px;
+  padding: 32px 40px;
+  background: var(--navy-deep);
+  color: white;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.problem-conclusion-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* === SOLUÇÃO === */
+.solution-section { background: white; padding-top: 60px; }
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.solution-card {
+  padding: 32px 28px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.solution-card:hover {
+  border-color: var(--navy);
+  transform: translateY(-4px);
+}
+
+.solution-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--gray-400);
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+}
+
+.solution-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.015em;
+  color: var(--navy-deep);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.solution-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+/* === COMO FUNCIONA === */
+.how-section {
+  background: var(--navy-deep);
+  color: white;
+}
+
+.how-section .section-eyebrow {
+  color: var(--green);
+}
+
+.how-section .section-eyebrow::before {
+  background: var(--green);
+}
+
+.how-section .section-title { color: white; }
+
+.how-section .section-subtitle { color: var(--silver); }
+
+.how-flow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+  position: relative;
+}
+
+.how-step {
+  padding: 36px 28px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.how-step.featured {
+  background: var(--green);
+  color: var(--navy-deep);
+  border-color: var(--green);
+}
+
+.how-step-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  color: var(--silver);
+}
+
+.how-step.featured .how-step-num {
+  color: var(--navy-deep);
+  opacity: 0.7;
+}
+
+.how-step-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.015em;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.how-step.featured .how-step-title { color: var(--navy-deep); }
+
+.how-step-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--silver);
+}
+
+.how-step.featured .how-step-text { color: var(--navy-deep); }
+
+/* === DIFERENCIAL TABELA === */
+.compare-section { background: white; }
+
+.compare-table {
+  margin-top: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1.5fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-row:last-child { border-bottom: none; }
+
+.compare-row.header {
+  background: var(--gray-50);
+}
+
+.compare-cell {
+  padding: 20px 28px;
+  font-size: 15px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+.compare-cell.attribute {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--navy-deep);
+}
+
+.compare-cell.market {
+  color: var(--gray-700);
+  border-left: 1px solid var(--border);
+}
+
+.compare-cell.hidrosul {
+  background: var(--navy-deep);
+  color: white;
+  font-weight: 500;
+  position: relative;
+}
+
+.compare-row.header .compare-cell {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 16px 28px;
+}
+
+.compare-row.header .compare-cell.hidrosul {
+  background: var(--navy-deep);
+  color: var(--green);
+}
+
+.compare-cell.hidrosul {
+  gap: 12px;
+}
+
+.compare-icon-check {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--green);
+}
+
+.compare-row.header .compare-cell.hidrosul { gap: 0; }
+
+/* === ESPECIALIDADES === */
+.specialty-section { background: var(--gray-50); }
+
+.specialty-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.specialty-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.specialty-image {
+  aspect-ratio: 16/10;
+  background: var(--gray-100);
+  position: relative;
+  overflow: hidden;
+}
+
+.specialty-image svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.specialty-image--gas { background: var(--navy-deep); }
+
+.specialty-content {
+  padding: 32px;
+}
+
+.specialty-tag {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--gray-100);
+  padding: 6px 12px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.specialty-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.015em;
+  color: var(--navy-deep);
+  margin-bottom: 12px;
+}
+
+.specialty-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+/* === SERVIÇOS COMPLEMENTARES === */
+.services-section { background: white; }
+
+.services-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.service-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--navy-deep);
+  transition: all 0.2s;
+}
+
+.service-link:hover {
+  border-color: var(--navy);
+  background: var(--gray-50);
+}
+
+.service-link-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.service-link-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.service-link-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.015em;
+}
+
+.service-link-arrow {
+  font-size: 24px;
+  color: var(--navy);
+  transition: transform 0.2s;
+}
+
+.service-link:hover .service-link-arrow { transform: translateX(4px); }
+
+/* === PARCEIROS === */
+.partners-section {
+  background: var(--gray-50);
+  padding: 80px 0;
+}
+
+.partners-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.partner-logo {
+  aspect-ratio: 2/1;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+  position: relative;
+}
+
+.partner-logo .placeholder-tag {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  font-family: var(--font-body);
+  font-size: 9px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+/* === DEPOIMENTO === */
+.testimonial-section { background: white; padding: 100px 0; }
+
+.testimonial {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  color: var(--navy-deep);
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.testimonial-quote::before {
+  content: '"';
+  display: block;
+  font-size: 80px;
+  line-height: 0.8;
+  color: var(--green);
+  margin-bottom: 16px;
+  font-family: var(--font-display);
+}
+
+.testimonial-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  border: 1px dashed var(--gray-200);
+}
+
+.testimonial-info {
+  text-align: left;
+}
+
+.testimonial-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--navy-deep);
+}
+
+.testimonial-role {
+  font-size: 13px;
+  color: var(--gray-700);
+}
+
+/* === CTA FINAL === */
+.cta-section {
+  background: var(--navy-deep);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 50%;
+  height: 100%;
+  background: repeating-linear-gradient(135deg, transparent, transparent 100px, rgba(37, 211, 102, 0.04) 100px, rgba(37, 211, 102, 0.04) 101px);
+  pointer-events: none;
+}
+
+.cta-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cta-title .accent { color: var(--green); }
+
+.cta-subtitle {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--silver);
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+
+.cta-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  backdrop-filter: blur(12px);
+}
+
+.cta-card-eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.cta-card-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 4px;
+  letter-spacing: -0.015em;
+}
+
+.cta-card-role {
+  font-size: 14px;
+  color: var(--silver);
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cta-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.cta-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--silver-soft);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cta-contact-item:hover { color: var(--green); }
+
+.cta-contact-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.cta-card .btn-primary {
+  width: 100%;
+  justify-content: center;
+  padding: 14px 24px;
+}
+
+/* === FOOTER === */
+.footer {
+  background: #0a1424;
+  color: var(--silver);
+  padding: 60px 0 32px;
+  font-size: 14px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand .logo {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: var(--silver);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.footer-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-list a {
+  color: var(--silver);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 13px;
+}
+
+.footer-list a:hover { color: white; }
+
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* Footer signature — Chibo Dev */
+.footer-signature {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+.footer-signature-label {
+  color: var(--silver);
+  font-weight: 400;
+}
+
+.footer-signature a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--silver-soft);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: transparent;
+  font-weight: 500;
+}
+
+.footer-signature a:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.03);
+}
+
+.footer-signature a.is-chibo:hover {
+  color: var(--chibo-green);
+  border-color: rgba(37, 211, 102, 0.4);
+  box-shadow: 0 0 12px var(--chibo-green-glow);
+}
+
+.footer-signature a.is-chibo .chibo-monogram {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-signature a.is-chibo .chibo-dot {
+  color: var(--chibo-green);
+  transition: filter 0.3s ease;
+}
+
+.footer-signature a.is-chibo:hover .chibo-dot {
+  filter: drop-shadow(0 0 4px var(--chibo-green-glow));
+}
+
+.footer-signature a.is-ig:hover {
+  color: var(--ig-pink);
+  border-color: rgba(214, 41, 119, 0.4);
+}
+
+.footer-signature a.is-ig:hover .ig-icon {
+  filter: drop-shadow(0 0 6px var(--ig-pink-glow));
+}
+
+.footer-signature .ig-icon {
+  transition: filter 0.3s ease;
+}
+
+.footer-signature-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+
+/* === WHATSAPP FLOAT === */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  z-index: 99;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.wa-float:hover { transform: scale(1.08); }
+
+.wa-float svg { width: 28px; height: 28px; fill: white; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .hero-inner,
+  .problem-grid,
+  .solution-grid,
+  .stats-grid,
+  .how-flow,
+  .specialty-grid,
+  .services-grid,
+  .services-intro,
+  .partners-grid,
+  .cta-inner,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .stat { border-left: none; border-top: 1px solid var(--border); padding: 24px 0 0; }
+  .stat:first-child { border-top: none; padding-top: 0; }
+  .partners-grid { grid-template-columns: 1fr 1fr; }
+  .section { padding: 64px 0; }
+  .hero { padding: 60px 0 70px; }
+  .compare-row { grid-template-columns: 1fr; }
+  .compare-cell { border-left: none !important; padding: 16px 20px; }
+  .problem-conclusion { flex-direction: column; align-items: flex-start; }
+}
+
+/* ===== HEADER · Contato em destaque + navegação responsiva ===== */
+.nav-dropdown::before { display: none; }
+.nav-cta {
+  font-family: var(--font-body); font-weight: 600; font-size: 14px;
+  color: var(--navy-deep); background: var(--green);
+  padding: 10px 20px; border-radius: var(--radius); text-decoration: none;
+  white-space: nowrap; transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.nav-cta:hover { background: var(--green-dark); color: var(--white); transform: translateY(-1px); }
+.nav-link:focus-visible, .nav-cta:focus-visible,
+.nav-dropdown-item:focus-visible, .nav-toggle:focus-visible {
+  outline: 2px solid var(--navy); outline-offset: 3px; border-radius: 2px;
+}
+.nav-toggle {
+  display: none; width: 44px; height: 44px; margin: -6px 0; padding: 0;
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  background: none; border: none; cursor: pointer;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 2px; border-radius: 2px;
+  background: var(--navy-deep); transition: transform 0.25s ease, opacity 0.2s ease;
+}
+@media (max-width: 900px) {
+  .header { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .logo, .nav-toggle { position: relative; z-index: 96; }
+  .header-inner { padding: 14px 0; }
+  .nav-toggle { display: flex; }
+  .hs-nav-open { overflow: hidden; }
+  .nav {
+    display: flex; position: fixed; inset: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--white); padding: 84px 24px 40px;
+    overflow-y: auto; z-index: 95;
+    transform: translateX(100%); visibility: hidden;
+    transition: transform 0.3s ease, visibility 0s linear 0.3s;
+  }
+  .hs-nav-open .nav {
+    transform: translateX(0); visibility: visible;
+    transition: transform 0.3s ease, visibility 0s;
+  }
+  .hs-nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hs-nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .hs-nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-link {
+    padding: 15px 4px; font-size: 16px; color: var(--navy-deep);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-item { display: block; }
+  .nav-item .nav-link.has-dropdown { display: block; }
+  .nav-dropdown {
+    position: static; transform: none;
+    opacity: 1; visibility: visible; pointer-events: auto;
+    width: auto; min-width: 0; padding: 4px 0 14px;
+    background: transparent; border: none; box-shadow: none;
+  }
+  .nav-dropdown-item { padding: 12px; }
+  .nav-dropdown-item.featured { background: var(--gray-50); color: var(--navy-deep); }
+  .nav-dropdown-item.featured .nav-dropdown-icon { background: var(--gray-100); color: var(--navy); }
+  .nav-dropdown-item.featured .nav-dropdown-desc { color: var(--gray-400); }
+  .nav-cta { margin-top: 20px; text-align: center; padding: 15px 20px; font-size: 15px; }
+}
+
+/* ===== Fontes self-hosted (variáveis) ===== */
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/archivo-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:100 700;font-display:swap;src:url('fonts/ibmplexsans-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+/* ===== Contraste (WCAG AA) ===== */
+:root { --gray-400: #5f6775; }
+.footer-bottom, .footer-signature, .aside-channel-label { color: #8a93a0; }
+.breadcrumb-list .separator { color: var(--gray-400); }
+.legal-block a, .faq-a a, .form-note a, .tech-card-tag,
+.timeline-year, .faq-q::after, .commitment-number,
+.faq-q:hover, .legal-toc-list a:hover { color: #15722f; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">H</span>
+        HIDRO SUL
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="quem-somos.html" class="nav-link">Quem somos</a>
+        <div class="nav-item" data-dropdown>
+          <a href="individualizacao-agua-gas.html" class="nav-link has-dropdown" aria-haspopup="true" aria-expanded="false" id="services-trigger">Serviços</a>
+          <div class="nav-dropdown" role="menu" aria-labelledby="services-trigger">
+            <a href="individualizacao-agua-gas.html" class="nav-dropdown-item featured" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Individualização de água e gás<span class="nav-dropdown-badge">Principal</span></span>
+                <span class="nav-dropdown-desc">Frente técnica especializada da Hidro Sul</span>
+              </span>
+            </a>
+            <a href="instalacao-predial.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7v14M21 7v14M6 11h.01M6 15h.01M6 19h.01M10 11h.01M10 15h.01M10 19h.01M14 11h.01M14 15h.01M14 19h.01M18 11h.01M18 15h.01M18 19h.01M5 7l7-4 7 4"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Instalação predial</span>
+                <span class="nav-dropdown-desc">Obras hidráulicas complementares</span>
+              </span>
+            </a>
+            <a href="reformas.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Reformas</span>
+                <span class="nav-dropdown-desc">Adequações em condomínios atendidos</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="parceiros.html" class="nav-link">Parceiros</a>
+        <a href="contato.html" class="nav-cta">Contato</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Parceria comercial · Grande São Paulo</div>
+        <h1>O braço técnico da sua <span class="accent">engenharia de vendas</span>.</h1>
+        <p class="hero-subtitle">Individualização de água e gás com precisão, escala e risco zero para a sua marca. Equipe própria CLT, seguro de obra e 20 anos de experiência exclusiva no segmento.</p>
+        <div class="hero-ctas">
+          <a href="#cta" class="btn-primary">
+            Falar com o Caio agora
+            <span>→</span>
+          </a>
+          <a href="#specialty" class="btn-secondary">Ver nossas instalações</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <span class="hero-trust-num">20+</span>
+            <span class="hero-trust-label">Anos de mercado</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-num">300K+</span>
+            <span class="hero-trust-label">Medidores instalados</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-num">100%</span>
+            <span class="hero-trust-label">Equipe própria CLT</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <span class="hero-image-tag">Instalação real · Hidro Sul</span>
+        <div class="placeholder">
+          <div class="placeholder-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </div>
+          <div class="placeholder-label">Foto hero</div>
+          <div class="placeholder-desc">Instalação de individualização em condomínio · formato 4:5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESCALA / STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Anos de experiência exclusiva em individualização.</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">300.000+</div>
+        <div class="stat-label">Medidores instalados com sucesso em toda a Grande São Paulo.</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Grande SP</div>
+        <div class="stat-label">Cobertura completa com velocidade, padrão e escala.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="section problem-section">
+  <div class="container">
+    <div class="section-eyebrow">O problema invisível</div>
+    <h2 class="section-title">O melhor medidor do mercado não sobrevive a uma instalação amadora.</h2>
+    <p class="section-subtitle">Para construtoras e empresas de medição, a venda só termina quando o sistema funciona perfeitamente. O elo mais frágil dessa cadeia é a execução.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card venda">
+        <div class="problem-label">A venda</div>
+        <h3 class="problem-headline">Produto premium, tecnologia de ponta, contrato fechado.</h3>
+        <p class="problem-text">Sua equipe comercial entrega o melhor sistema do mercado. Medidores precisos, telemetria avançada, garantia robusta. O síndico assina convicto.</p>
+        <div class="problem-image problem-image--meter">
+          <svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-label="Medidor de água premium em destaque">
+            <defs>
+              <pattern id="grid-meter" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+                <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(15,29,53,0.04)" stroke-width="0.5"/>
+              </pattern>
+              <linearGradient id="meter-body" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#e8edf3"/>
+                <stop offset="50%" style="stop-color:#c5cdd6"/>
+                <stop offset="100%" style="stop-color:#9aa3b0"/>
+              </linearGradient>
+              <linearGradient id="brass" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#e0a96d"/>
+                <stop offset="50%" style="stop-color:#b8853f"/>
+                <stop offset="100%" style="stop-color:#8a6028"/>
+              </linearGradient>
+              <linearGradient id="pipe-green" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#3a7d3a"/>
+                <stop offset="50%" style="stop-color:#2d5f2d"/>
+                <stop offset="100%" style="stop-color:#1f4520"/>
+              </linearGradient>
+              <radialGradient id="display-glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#fff"/>
+                <stop offset="80%" style="stop-color:#e8edf3"/>
+                <stop offset="100%" style="stop-color:#9aa3b0"/>
+              </radialGradient>
+            </defs>
+
+            <rect width="480" height="260" fill="#fafbfc"/>
+            <rect width="480" height="260" fill="url(#grid-meter)"/>
+
+            <!-- Tubo verde esquerda (PPR) -->
+            <rect x="0" y="115" width="120" height="30" fill="url(#pipe-green)"/>
+            <rect x="0" y="115" width="120" height="4" fill="#5a9f5a" opacity="0.6"/>
+            <rect x="115" y="110" width="10" height="40" fill="#1a2942"/>
+
+            <!-- Conexão latão esquerda -->
+            <rect x="125" y="118" width="30" height="24" fill="url(#brass)" rx="2"/>
+            <rect x="125" y="118" width="30" height="3" fill="#f0c280" opacity="0.7"/>
+            <circle cx="140" cy="130" r="3" fill="#5a3a18" opacity="0.4"/>
+
+            <!-- Corpo do medidor (centro - protagonista) -->
+            <g transform="translate(155, 80)">
+              <!-- Base inferior cilíndrica -->
+              <ellipse cx="85" cy="100" rx="80" ry="12" fill="url(#brass)"/>
+              <rect x="5" y="60" width="160" height="40" fill="url(#brass)"/>
+              <rect x="5" y="60" width="160" height="4" fill="#f0c280" opacity="0.5"/>
+
+              <!-- Corpo cilíndrico principal (cinza metálico) -->
+              <ellipse cx="85" cy="60" rx="80" ry="14" fill="url(#meter-body)"/>
+              <rect x="5" y="20" width="160" height="40" fill="url(#meter-body)"/>
+              <ellipse cx="85" cy="20" rx="80" ry="14" fill="#d8dde4"/>
+
+              <!-- Display redondo no topo -->
+              <ellipse cx="85" cy="20" rx="50" ry="9" fill="#5a6373"/>
+              <ellipse cx="85" cy="15" rx="50" ry="9" fill="url(#display-glow)"/>
+              <ellipse cx="85" cy="14" rx="45" ry="7" fill="#fff" stroke="#1a2942" stroke-width="0.8"/>
+
+              <!-- Números do display -->
+              <g>
+                <rect x="55" y="10" width="60" height="9" fill="#0f1d35" rx="1"/>
+                <text x="85" y="17.5" text-anchor="middle" font-family="Archivo, sans-serif" font-size="8" font-weight="700" fill="#25d366" letter-spacing="1.5">04287.6</text>
+              </g>
+
+              <!-- Texto da marca no corpo -->
+              <text x="85" y="48" text-anchor="middle" font-family="Archivo, sans-serif" font-size="9" font-weight="800" fill="#1a2942" letter-spacing="1">HIDRO SUL</text>
+              <text x="85" y="58" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="6" fill="#5a6373" letter-spacing="0.5">CLASS B · Q3 1,5 m³/h</text>
+
+              <!-- Lacre vermelho -->
+              <rect x="78" y="85" width="14" height="14" fill="#c0392b" rx="1"/>
+              <circle cx="85" cy="92" r="3" fill="#8a2820"/>
+
+              <!-- Highlight metálico vertical -->
+              <rect x="15" y="22" width="6" height="38" fill="#fff" opacity="0.35"/>
+              <rect x="148" y="22" width="4" height="38" fill="#0f1d35" opacity="0.15"/>
+            </g>
+
+            <!-- Conexão latão direita -->
+            <rect x="325" y="118" width="30" height="24" fill="url(#brass)" rx="2"/>
+            <rect x="325" y="118" width="30" height="3" fill="#f0c280" opacity="0.7"/>
+            <circle cx="340" cy="130" r="3" fill="#5a3a18" opacity="0.4"/>
+
+            <!-- Tubo verde direita -->
+            <rect x="355" y="110" width="10" height="40" fill="#1a2942"/>
+            <rect x="360" y="115" width="120" height="30" fill="url(#pipe-green)"/>
+            <rect x="360" y="115" width="120" height="4" fill="#5a9f5a" opacity="0.6"/>
+
+            <!-- Selo de qualidade canto superior direito -->
+            <g transform="translate(395, 30)">
+              <circle cx="25" cy="25" r="24" fill="#25d366" opacity="0.12"/>
+              <circle cx="25" cy="25" r="22" fill="none" stroke="#25d366" stroke-width="1.5"/>
+              <path d="M 16 25 L 22 31 L 34 19" stroke="#25d366" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+
+            <!-- Linhas de cota técnica -->
+            <g opacity="0.4">
+              <line x1="155" y1="200" x2="325" y2="200" stroke="#1a2942" stroke-width="1"/>
+              <line x1="155" y1="195" x2="155" y2="205" stroke="#1a2942" stroke-width="1"/>
+              <line x1="325" y1="195" x2="325" y2="205" stroke="#1a2942" stroke-width="1"/>
+              <rect x="220" y="192" width="40" height="14" fill="#fafbfc"/>
+              <text x="240" y="203" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" font-weight="500" fill="#1a2942">170mm</text>
+            </g>
+
+            <!-- Label canto inferior -->
+            <g transform="translate(20, 225)">
+              <rect x="0" y="0" width="80" height="20" fill="#1a2942" rx="2"/>
+              <text x="40" y="14" text-anchor="middle" font-family="Archivo, sans-serif" font-size="10" font-weight="700" fill="#fff" letter-spacing="0.5">PREMIUM</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="problem-card risco">
+        <div class="problem-label">O risco</div>
+        <h3 class="problem-headline">Empreiteiro errado. Marca queimada.</h3>
+        <p class="problem-text">Mão de obra não qualificada gera vazamentos, retrabalhos e atrasos. O cliente final não distingue produto de instalação: ele culpa quem vendeu.</p>
+        <div class="problem-image problem-image--issue">
+          <svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-label="Instalação amadora com problemas técnicos">
+            <defs>
+              <pattern id="grid-issue" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+                <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+              </pattern>
+              <linearGradient id="pipe-bad-green" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#4a8a4a"/>
+                <stop offset="100%" style="stop-color:#2d5f2d"/>
+              </linearGradient>
+              <linearGradient id="rust" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#8a4a2a"/>
+                <stop offset="100%" style="stop-color:#5a2818"/>
+              </linearGradient>
+            </defs>
+
+            <rect width="480" height="260" fill="#0f1d35"/>
+            <rect width="480" height="260" fill="url(#grid-issue)"/>
+
+            <!-- Tubulações tortas/desalinhadas (caos) -->
+            <!-- Tubo 1: torto, com angulação errada -->
+            <g transform="rotate(-8 100 80)">
+              <rect x="20" y="70" width="180" height="22" fill="url(#pipe-bad-green)"/>
+              <rect x="20" y="70" width="180" height="3" fill="#5a9f5a" opacity="0.4"/>
+              <!-- Mancha de oxidação -->
+              <ellipse cx="80" cy="82" rx="15" ry="6" fill="url(#rust)" opacity="0.6"/>
+              <ellipse cx="140" cy="83" rx="10" ry="4" fill="url(#rust)" opacity="0.5"/>
+            </g>
+
+            <!-- Tubo 2: cruzando errado -->
+            <g transform="rotate(12 280 130)">
+              <rect x="180" y="125" width="200" height="18" fill="url(#pipe-bad-green)"/>
+              <rect x="180" y="125" width="200" height="3" fill="#5a9f5a" opacity="0.3"/>
+            </g>
+
+            <!-- Tubo 3: vertical desalinhado -->
+            <g transform="rotate(-3 350 180)">
+              <rect x="340" y="40" width="20" height="200" fill="url(#pipe-bad-green)"/>
+              <rect x="340" y="40" width="3" height="200" fill="#5a9f5a" opacity="0.4"/>
+            </g>
+
+            <!-- Conexão mal feita - fita branca em excesso (gambiarra) -->
+            <g transform="translate(160, 60)">
+              <rect x="0" y="0" width="40" height="35" fill="#d8dde4" opacity="0.85" rx="2"/>
+              <line x1="0" y1="5" x2="40" y2="5" stroke="#fff" stroke-width="1.2" opacity="0.7"/>
+              <line x1="0" y1="12" x2="40" y2="12" stroke="#fff" stroke-width="1.2" opacity="0.7"/>
+              <line x1="0" y1="20" x2="40" y2="20" stroke="#fff" stroke-width="1.2" opacity="0.7"/>
+              <line x1="0" y1="28" x2="40" y2="28" stroke="#fff" stroke-width="1.2" opacity="0.7"/>
+            </g>
+
+            <!-- Vazamento (gotas caindo) -->
+            <g>
+              <!-- Mancha de água molhada -->
+              <ellipse cx="220" cy="220" rx="60" ry="8" fill="#4a9fd8" opacity="0.25"/>
+              <ellipse cx="220" cy="220" rx="40" ry="5" fill="#4a9fd8" opacity="0.4"/>
+
+              <!-- Gotas em queda -->
+              <path d="M 200 150 Q 198 155, 200 160 Q 202 155, 200 150 Z" fill="#85b7eb" opacity="0.9"/>
+              <path d="M 210 175 Q 208 180, 210 185 Q 212 180, 210 175 Z" fill="#85b7eb" opacity="0.7"/>
+              <path d="M 195 195 Q 193 200, 195 205 Q 197 200, 195 195 Z" fill="#85b7eb" opacity="0.85"/>
+              <circle cx="225" cy="210" r="2" fill="#85b7eb" opacity="0.8"/>
+              <circle cx="215" cy="218" r="1.5" fill="#85b7eb" opacity="0.7"/>
+            </g>
+
+            <!-- Triângulos de alerta vermelhos -->
+            <g transform="translate(75, 30)">
+              <path d="M 14 0 L 28 24 L 0 24 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+              <rect x="13" y="8" width="2" height="9" fill="#fff"/>
+              <circle cx="14" cy="20" r="1.5" fill="#fff"/>
+            </g>
+
+            <g transform="translate(395, 75)">
+              <path d="M 14 0 L 28 24 L 0 24 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+              <rect x="13" y="8" width="2" height="9" fill="#fff"/>
+              <circle cx="14" cy="20" r="1.5" fill="#fff"/>
+            </g>
+
+            <g transform="translate(260, 160)">
+              <path d="M 14 0 L 28 24 L 0 24 Z" fill="#c0392b" stroke="#fff" stroke-width="1.5"/>
+              <rect x="13" y="8" width="2" height="9" fill="#fff"/>
+              <circle cx="14" cy="20" r="1.5" fill="#fff"/>
+            </g>
+
+            <!-- Ferramentas largadas no chão -->
+            <g transform="translate(60, 215)">
+              <!-- Chave inglesa -->
+              <g transform="rotate(-25)">
+                <rect x="0" y="0" width="50" height="6" fill="#5a6373" rx="1"/>
+                <rect x="-2" y="-3" width="10" height="12" fill="#5a6373" rx="1"/>
+                <rect x="46" y="-2" width="8" height="10" fill="#5a6373" rx="1"/>
+              </g>
+            </g>
+
+            <g transform="translate(310, 230)">
+              <!-- Alicate -->
+              <g transform="rotate(15)">
+                <path d="M 0 0 L 30 5 L 35 8 L 30 10 L 0 5 Z" fill="#c0392b"/>
+                <rect x="-2" y="2" width="6" height="6" fill="#1a1a1a"/>
+              </g>
+            </g>
+
+            <!-- Mancha de água/sujeira no chão -->
+            <ellipse cx="120" cy="245" rx="35" ry="4" fill="#1a2942" opacity="0.4"/>
+            <ellipse cx="380" cy="248" rx="25" ry="3" fill="#1a2942" opacity="0.4"/>
+
+            <!-- Label vermelho canto superior direito -->
+            <g transform="translate(380, 18)">
+              <rect x="0" y="0" width="80" height="20" fill="#c0392b" rx="2"/>
+              <text x="40" y="14" text-anchor="middle" font-family="Archivo, sans-serif" font-size="10" font-weight="700" fill="#fff" letter-spacing="0.5">RETRABALHO</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-conclusion">
+      <div class="problem-conclusion-text">A reputação da sua marca está nas mãos de quem aperta a última conexão.</div>
+      <a href="#cta" class="btn-primary">Conversar sobre isso</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="section solution-section">
+  <div class="container">
+    <div class="section-eyebrow">A solução</div>
+    <h2 class="section-title">O parceiro que blinda a sua reputação.</h2>
+    <p class="section-subtitle">A Hidro Sul é o braço técnico que garante a qualidade das suas vendas. Você foca no relacionamento e na tecnologia. Nós executamos com o padrão que a sua marca exige.</p>
+
+    <div class="solution-grid">
+      <div class="solution-card">
+        <div class="solution-number">01</div>
+        <h3 class="solution-title">Zero retrabalho</h3>
+        <p class="solution-text">Instalações executadas com qualidade desde a primeira intervenção. Geometria precisa, vedação técnica, testes rigorosos antes da entrega.</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-number">02</div>
+        <h3 class="solution-title">Foco no core business</h3>
+        <p class="solution-text">Você vende, nós cuidamos de toda a execução. Sem desviar sua equipe comercial para apagar incêndios de obra ou mediar conflitos com empreiteiros.</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-number">03</div>
+        <h3 class="solution-title">Satisfação final garantida</h3>
+        <p class="solution-text">Sistema operando sem falhas. Síndico satisfeito, morador atendido, marca prestigiada. E o caminho aberto para a próxima indicação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="section how-section">
+  <div class="container">
+    <div class="section-eyebrow">Como funciona</div>
+    <h2 class="section-title">O ecossistema da parceria estratégica.</h2>
+    <p class="section-subtitle">Um fluxo claro, sem zonas cinzentas. Cada parte cuida do que faz melhor.</p>
+
+    <div class="how-flow">
+      <div class="how-step">
+        <div class="how-step-num">01 · VOCÊ</div>
+        <div class="how-step-title">Você vende</div>
+        <p class="how-step-text">Foco em relacionamento, tecnologia e fechamento de contratos com condomínios e construtoras.</p>
+      </div>
+      <div class="how-step featured">
+        <div class="how-step-num">02 · HIDRO SUL</div>
+        <div class="how-step-title">Nós instalamos</div>
+        <p class="how-step-text">Entramos em cena com equipe própria, seguro de obra e técnica impecável para executar de ponta a ponta.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">03 · CLIENTE</div>
+        <div class="how-step-title">Cliente celebra</div>
+        <p class="how-step-text">Sistema operando sem falhas. Sua marca ganha prestígio e o caminho se abre para novas indicações.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL TABELA -->
+<section class="section compare-section">
+  <div class="container">
+    <div class="section-eyebrow">Contraste de valor</div>
+    <h2 class="section-title">Por que escolher a Hidro Sul.</h2>
+    <p class="section-subtitle">A diferença entre uma empresa que faz instalação e uma empresa que blinda a sua entrega.</p>
+
+    <div class="compare-table">
+      <div class="compare-row header">
+        <div class="compare-cell attribute">Atributo</div>
+        <div class="compare-cell market">Padrão de mercado</div>
+        <div class="compare-cell hidrosul">Padrão Hidro Sul</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell attribute">Mão de obra</div>
+        <div class="compare-cell market">Terceirizada, rotatividade alta</div>
+        <div class="compare-cell hidrosul"><svg class="compare-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Equipe própria CLT, padronizada e treinada</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell attribute">Segurança</div>
+        <div class="compare-cell market">Risco assumido pelo vendedor ou condomínio</div>
+        <div class="compare-cell hidrosul"><svg class="compare-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Seguro de obra ativo, blindagem jurídica</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell attribute">Foco</div>
+        <div class="compare-cell market">Empreiteiros generalistas que fazem de tudo</div>
+        <div class="compare-cell hidrosul"><svg class="compare-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Especialistas 100% em individualização</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell attribute">Qualidade visual</div>
+        <div class="compare-cell market">Tubulações tortas, restos de obra</div>
+        <div class="compare-cell hidrosul"><svg class="compare-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Precisão projetada, limpeza pós-obra</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell attribute">Impacto no parceiro</div>
+        <div class="compare-cell market">Chamados técnicos, desgaste da marca</div>
+        <div class="compare-cell hidrosul"><svg class="compare-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Instala, testa e entrega. Zero dor de cabeça</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section id="specialty" class="section specialty-section">
+  <div class="container">
+    <div class="section-eyebrow">Frentes críticas</div>
+    <h2 class="section-title">Especialistas onde o erro custa caro.</h2>
+    <p class="section-subtitle">Duas frentes técnicas em que a Hidro Sul opera com domínio completo de materiais, normas e procedimentos.</p>
+
+    <div class="specialty-grid">
+      <div class="specialty-card">
+        <div class="specialty-image specialty-image--water">
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-label="Esquema técnico de individualização de água">
+            <defs>
+              <pattern id="grid-water" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(15,29,53,0.05)" stroke-width="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="480" height="300" fill="#f7f8fa"/>
+            <rect width="480" height="300" fill="url(#grid-water)"/>
+
+            <!-- Coluna vertical principal -->
+            <rect x="60" y="20" width="14" height="260" fill="#1a2942" rx="2"/>
+            <rect x="60" y="20" width="14" height="260" fill="url(#water-shine)" opacity="0.3"/>
+
+            <!-- Saídas horizontais (3 medidores) -->
+            <g>
+              <!-- Linha 1 -->
+              <rect x="74" y="62" width="120" height="10" fill="#1a2942"/>
+              <rect x="194" y="58" width="8" height="18" fill="#0f1d35"/>
+              <circle cx="220" cy="67" r="18" fill="#e8edf3" stroke="#1a2942" stroke-width="2"/>
+              <circle cx="220" cy="67" r="12" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <text x="220" y="71" text-anchor="middle" font-family="Archivo, sans-serif" font-size="9" font-weight="700" fill="#1a2942">M1</text>
+              <rect x="238" y="58" width="8" height="18" fill="#0f1d35"/>
+              <rect x="246" y="62" width="80" height="10" fill="#25d366"/>
+              <!-- Válvula -->
+              <rect x="200" y="48" width="4" height="14" fill="#c0392b"/>
+              <circle cx="202" cy="46" r="4" fill="#c0392b"/>
+
+              <!-- Linha 2 -->
+              <rect x="74" y="142" width="120" height="10" fill="#1a2942"/>
+              <rect x="194" y="138" width="8" height="18" fill="#0f1d35"/>
+              <circle cx="220" cy="147" r="18" fill="#e8edf3" stroke="#1a2942" stroke-width="2"/>
+              <circle cx="220" cy="147" r="12" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <text x="220" y="151" text-anchor="middle" font-family="Archivo, sans-serif" font-size="9" font-weight="700" fill="#1a2942">M2</text>
+              <rect x="238" y="138" width="8" height="18" fill="#0f1d35"/>
+              <rect x="246" y="142" width="80" height="10" fill="#25d366"/>
+              <rect x="200" y="128" width="4" height="14" fill="#c0392b"/>
+              <circle cx="202" cy="126" r="4" fill="#c0392b"/>
+
+              <!-- Linha 3 -->
+              <rect x="74" y="222" width="120" height="10" fill="#1a2942"/>
+              <rect x="194" y="218" width="8" height="18" fill="#0f1d35"/>
+              <circle cx="220" cy="227" r="18" fill="#e8edf3" stroke="#1a2942" stroke-width="2"/>
+              <circle cx="220" cy="227" r="12" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <text x="220" y="231" text-anchor="middle" font-family="Archivo, sans-serif" font-size="9" font-weight="700" fill="#1a2942">M3</text>
+              <rect x="238" y="218" width="8" height="18" fill="#0f1d35"/>
+              <rect x="246" y="222" width="80" height="10" fill="#25d366"/>
+              <rect x="200" y="208" width="4" height="14" fill="#c0392b"/>
+              <circle cx="202" cy="206" r="4" fill="#c0392b"/>
+            </g>
+
+            <!-- Indicadores de cota (geometria de montagem) -->
+            <g opacity="0.5">
+              <line x1="380" y1="67" x2="420" y2="67" stroke="#1a2942" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="380" y1="147" x2="420" y2="147" stroke="#1a2942" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="380" y1="227" x2="420" y2="227" stroke="#1a2942" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="410" y1="60" x2="410" y2="234" stroke="#1a2942" stroke-width="1"/>
+              <line x1="406" y1="60" x2="414" y2="60" stroke="#1a2942" stroke-width="1"/>
+              <line x1="406" y1="234" x2="414" y2="234" stroke="#1a2942" stroke-width="1"/>
+              <text x="430" y="150" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#1a2942">80cm</text>
+            </g>
+
+            <!-- Drops de água decorativos -->
+            <g opacity="0.15">
+              <circle cx="40" cy="60" r="3" fill="#1a2942"/>
+              <circle cx="30" cy="160" r="2" fill="#1a2942"/>
+              <circle cx="45" cy="240" r="2.5" fill="#1a2942"/>
+            </g>
+
+            <!-- Label técnico -->
+            <g>
+              <rect x="20" y="20" width="32" height="20" fill="#1a2942" rx="2"/>
+              <text x="36" y="34" text-anchor="middle" font-family="Archivo, sans-serif" font-size="10" font-weight="700" fill="#fff">H₂O</text>
+            </g>
+
+            <defs>
+              <linearGradient id="water-shine" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#fff;stop-opacity:0"/>
+                <stop offset="50%" style="stop-color:#fff;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#fff;stop-opacity:0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="specialty-content">
+          <span class="specialty-tag">Água</span>
+          <h3 class="specialty-title">Individualização de água</h3>
+          <p class="specialty-text">Trabalhamos com tubulação em PPR, PEX, PVC, Aquatherm e cobre. Geometria de montagem exata, posicionamento técnico dos medidores e padronização de componentes.</p>
+        </div>
+      </div>
+      <div class="specialty-card">
+        <div class="specialty-image specialty-image--gas">
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-label="Esquema técnico de individualização de gás">
+            <defs>
+              <pattern id="grid-gas" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(15,29,53,0.05)" stroke-width="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="480" height="300" fill="#0f1d35"/>
+            <rect width="480" height="300" fill="url(#grid-gas)" opacity="0.3"/>
+
+            <!-- Tubulação principal de cobre (horizontal superior) -->
+            <rect x="40" y="50" width="400" height="12" fill="#c5814a" rx="2"/>
+            <rect x="40" y="50" width="400" height="3" fill="#e8a86b"/>
+
+            <!-- Descidas para medidores -->
+            <g>
+              <!-- Medidor 1 -->
+              <rect x="100" y="62" width="10" height="60" fill="#c5814a"/>
+              <rect x="102" y="62" width="3" height="60" fill="#e8a86b"/>
+              <!-- Válvula amarela -->
+              <rect x="96" y="122" width="18" height="8" fill="#f4c724"/>
+              <rect x="100" y="115" width="10" height="10" fill="#f4c724"/>
+              <!-- Conexão flexível (preta corrugada) -->
+              <path d="M 105 130 Q 105 145, 115 150 Q 130 155, 130 168 L 130 175" stroke="#1a1a1a" stroke-width="6" fill="none"/>
+              <path d="M 105 130 Q 105 145, 115 150 Q 130 155, 130 168 L 130 175" stroke="#444" stroke-width="6" fill="none" stroke-dasharray="3,3" opacity="0.6"/>
+              <!-- Corpo do medidor -->
+              <rect x="100" y="175" width="60" height="60" fill="#d8dde4" stroke="#1a2942" stroke-width="1.5" rx="3"/>
+              <rect x="108" y="183" width="44" height="20" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <text x="130" y="197" text-anchor="middle" font-family="Archivo, sans-serif" font-size="9" font-weight="700" fill="#1a2942">0421.8</text>
+              <circle cx="130" cy="218" r="6" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <line x1="130" y1="218" x2="134" y2="215" stroke="#1a2942" stroke-width="1.5"/>
+
+              <!-- Medidor 2 -->
+              <rect x="240" y="62" width="10" height="60" fill="#c5814a"/>
+              <rect x="242" y="62" width="3" height="60" fill="#e8a86b"/>
+              <rect x="236" y="122" width="18" height="8" fill="#f4c724"/>
+              <rect x="240" y="115" width="10" height="10" fill="#f4c724"/>
+              <path d="M 245 130 Q 245 145, 255 150 Q 270 155, 270 168 L 270 175" stroke="#1a1a1a" stroke-width="6" fill="none"/>
+              <path d="M 245 130 Q 245 145, 255 150 Q 270 155, 270 168 L 270 175" stroke="#444" stroke-width="6" fill="none" stroke-dasharray="3,3" opacity="0.6"/>
+              <rect x="240" y="175" width="60" height="60" fill="#d8dde4" stroke="#1a2942" stroke-width="1.5" rx="3"/>
+              <rect x="248" y="183" width="44" height="20" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <text x="270" y="197" text-anchor="middle" font-family="Archivo, sans-serif" font-size="9" font-weight="700" fill="#1a2942">1287.3</text>
+              <circle cx="270" cy="218" r="6" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <line x1="270" y1="218" x2="274" y2="215" stroke="#1a2942" stroke-width="1.5"/>
+
+              <!-- Medidor 3 -->
+              <rect x="380" y="62" width="10" height="60" fill="#c5814a"/>
+              <rect x="382" y="62" width="3" height="60" fill="#e8a86b"/>
+              <rect x="376" y="122" width="18" height="8" fill="#f4c724"/>
+              <rect x="380" y="115" width="10" height="10" fill="#f4c724"/>
+              <path d="M 385 130 Q 385 145, 395 150 Q 410 155, 410 168 L 410 175" stroke="#1a1a1a" stroke-width="6" fill="none"/>
+              <path d="M 385 130 Q 385 145, 395 150 Q 410 155, 410 168 L 410 175" stroke="#444" stroke-width="6" fill="none" stroke-dasharray="3,3" opacity="0.6"/>
+              <rect x="380" y="175" width="60" height="60" fill="#d8dde4" stroke="#1a2942" stroke-width="1.5" rx="3"/>
+              <rect x="388" y="183" width="44" height="20" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <text x="410" y="197" text-anchor="middle" font-family="Archivo, sans-serif" font-size="9" font-weight="700" fill="#1a2942">0876.5</text>
+              <circle cx="410" cy="218" r="6" fill="#fff" stroke="#1a2942" stroke-width="1"/>
+              <line x1="410" y1="218" x2="414" y2="215" stroke="#1a2942" stroke-width="1.5"/>
+            </g>
+
+            <!-- Chama decorativa no topo -->
+            <g transform="translate(40, 25)">
+              <path d="M 8 14 Q 0 8, 4 0 Q 6 5, 10 3 Q 8 8, 14 10 Q 10 14, 8 14 Z" fill="#25d366"/>
+              <path d="M 8 12 Q 4 8, 6 4 Q 8 6, 10 5 Q 8 8, 12 9 Q 10 12, 8 12 Z" fill="#f4c724"/>
+            </g>
+
+            <!-- Label técnico -->
+            <g>
+              <rect x="60" y="20" width="32" height="20" fill="#25d366" rx="2"/>
+              <text x="76" y="34" text-anchor="middle" font-family="Archivo, sans-serif" font-size="10" font-weight="700" fill="#0f1d35">GLP</text>
+            </g>
+
+            <!-- Detalhe técnico (cota) -->
+            <g opacity="0.5">
+              <line x1="170" y1="205" x2="230" y2="205" stroke="#c5cdd6" stroke-width="1" stroke-dasharray="3,3"/>
+              <text x="200" y="200" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#c5cdd6">140cm</text>
+            </g>
+          </svg>
+        </div>
+        <div class="specialty-content">
+          <span class="specialty-tag">Gás</span>
+          <h3 class="specialty-title">Individualização de gás</h3>
+          <p class="specialty-text">Tubulação em cobre, PPR e multicamadas. Conexões flexíveis com raio de curvatura técnico, adaptações limpas em shafts e testes rigorosos antes da entrega.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS COMPLEMENTARES -->
+<section class="section services-section">
+  <div class="container">
+    <div class="services-intro">
+      <div>
+        <div class="section-eyebrow">Ecossistema completo</div>
+        <h2 class="section-title">Serviços complementares de obra hidráulica.</h2>
+      </div>
+      <p style="font-size: 16px; line-height: 1.6; color: var(--gray-700);">Para parceiros e clientes já atendidos, oferecemos também serviços complementares de instalação predial e reforma — executados com o mesmo padrão técnico da nossa frente principal.</p>
+    </div>
+
+    <div class="services-grid">
+      <a href="instalacao-predial.html" class="service-link">
+        <div class="service-link-info">
+          <span class="service-link-label">Complementar</span>
+          <span class="service-link-title">Instalação predial</span>
+        </div>
+        <span class="service-link-arrow">→</span>
+      </a>
+      <a href="reformas.html" class="service-link">
+        <div class="service-link-info">
+          <span class="service-link-label">Complementar</span>
+          <span class="service-link-title">Reformas</span>
+        </div>
+        <span class="service-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PARCEIROS -->
+<section class="partners-section">
+  <div class="container">
+    <div class="partners-header">
+      <div class="section-eyebrow" style="justify-content: center;">Prova social</div>
+      <h2 class="section-title" style="margin: 0 auto; text-align: center;">As melhores marcas confiam na nossa instalação.</h2>
+      <p class="section-subtitle" style="margin: 20px auto 0; text-align: center;">Atuamos em parceria com grandes empresas do mercado de medição, garantindo que suas tecnologias performem com 100% de eficiência em campo.</p>
+    </div>
+
+    <div class="partners-grid">
+      <div class="partner-logo">Techem<span class="placeholder-tag">logo</span></div>
+      <div class="partner-logo">MJ<span class="placeholder-tag">logo</span></div>
+      <div class="partner-logo">Laager<span class="placeholder-tag">logo</span></div>
+      <div class="partner-logo">Aquamed<span class="placeholder-tag">logo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTO -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial">
+      <p class="testimonial-quote">A Hidro Sul é o único parceiro de instalação que entrega o padrão técnico que a nossa marca exige. Em mais de 50 obras juntos, nenhum chamado de retrabalho. Isso muda a forma como vendemos.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar"></div>
+        <div class="testimonial-info">
+          <div class="testimonial-name">[Nome do parceiro]</div>
+          <div class="testimonial-role">Cargo · Empresa parceira</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta" class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <h2 class="cta-title">Vamos blindar a sua <span class="accent">próxima obra</span> juntos.</h2>
+        <p class="cta-subtitle">Elimine os retrabalhos e eleve o padrão das suas entregas na Grande São Paulo. Conversa direta, proposta técnica em até 48h.</p>
+        <a href="https://wa.me/5511983428297" class="btn-primary" style="padding: 14px 24px; font-size: 15px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Conversar pelo WhatsApp
+        </a>
+      </div>
+
+      <div class="cta-card">
+        <div class="cta-card-eyebrow">Contato direto</div>
+        <div class="cta-card-name">Caio Vital</div>
+        <div class="cta-card-role">Parcerias comerciais · Grande SP</div>
+
+        <div class="cta-contact">
+          <a href="tel:+5511983428297" class="cta-contact-item">
+            <span class="cta-contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span>11 98342-8297</span>
+          </a>
+          <a href="mailto:caio@hidro-sul.com" class="cta-contact-item">
+            <span class="cta-contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span>caio@hidro-sul.com</span>
+          </a>
+        </div>
+
+        <a href="https://wa.me/5511983428297" class="btn-primary">
+          <span>WhatsApp direto</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">H</span>
+          HIDRO SUL
+        </a>
+        <p class="footer-tagline">A base sólida para a sua tecnologia. Especialistas em individualização de água e gás na Grande São Paulo.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Serviços</h4>
+        <ul class="footer-list">
+          <li><a href="individualizacao-agua-gas.html">Individualização de água</a></li>
+          <li><a href="individualizacao-agua-gas.html">Individualização de gás</a></li>
+          <li><a href="instalacao-predial.html">Instalação predial</a></li>
+          <li><a href="reformas.html">Reformas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Empresa</h4>
+        <ul class="footer-list">
+          <li><a href="quem-somos.html">Quem somos</a></li>
+          <li><a href="parceiros.html">Parceiros</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contato</h4>
+        <ul class="footer-list">
+          <li><a href="tel:+5511983428297">11 98342-8297</a></li>
+          <li><a href="mailto:caio@hidro-sul.com">caio@hidro-sul.com</a></li>
+          <li>Grande São Paulo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Hidro Sul. Todos os direitos reservados. · <a href="politica-de-privacidade.html" style="color: var(--silver); text-decoration: none;">Política de Privacidade</a> · <a href="politica-de-cookies.html" style="color: var(--silver); text-decoration: none;">Política de Cookies</a> · <a href="termos-de-uso.html" style="color: var(--silver); text-decoration: none;">Termos de Uso</a></span>
+      <div class="footer-signature">
+        <span class="footer-signature-label">Desenvolvido por</span>
+        <a href="https://chibodev.com" target="_blank" rel="noopener" class="is-chibo">
+          <span class="chibo-monogram">C<span class="chibo-dot">.</span></span>
+          <span>Chibo Dev</span>
+        </a>
+        <span class="footer-signature-divider"></span>
+        <a href="https://instagram.com/chibodev" target="_blank" rel="noopener" class="is-ig" aria-label="Instagram Chibo Dev">
+          <svg class="ig-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>@chibodev</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5511983428297" class="wa-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  (function() {
+    const dropdowns = document.querySelectorAll('[data-dropdown]');
+
+    dropdowns.forEach(function(item) {
+      const trigger = item.querySelector('.nav-link.has-dropdown');
+      if (!trigger) return;
+
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isOpen = item.getAttribute('data-open') === 'true';
+        closeAll();
+        if (!isOpen) {
+          item.setAttribute('data-open', 'true');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Suporte a teclado: setas e Enter
+      trigger.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.setAttribute('data-open', 'true');
+          trigger.setAttribute('aria-expanded', 'true');
+          const firstItem = item.querySelector('.nav-dropdown-item');
+          if (firstItem) firstItem.focus();
+        }
+      });
+    });
+
+    function closeAll() {
+      dropdowns.forEach(function(item) {
+        item.setAttribute('data-open', 'false');
+        const trigger = item.querySelector('.nav-link.has-dropdown');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    // Fechar com ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeAll();
+    });
+
+    // Fechar ao clicar fora
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('[data-dropdown]')) closeAll();
+    });
+  })();
+</script>
+
+<script src="cookie-consent.js" defer></script>
+</body>
+</html>

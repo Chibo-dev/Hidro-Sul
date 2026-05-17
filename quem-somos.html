@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quem Somos | Hidro Sul · 20 anos em individualização de água e gás</title>
+<meta name="description" content="A Hidro Sul é especialista em individualização de água e gás na Grande São Paulo há mais de 20 anos. Equipe própria CLT, seguro de obra, 300.000+ medidores instalados.">
+<meta name="keywords" content="hidro sul, sobre, empresa, individualização, água, gás, são paulo, equipe própria">
+
+<meta property="og:title" content="Quem Somos | Hidro Sul">
+<meta property="og:description" content="20 anos de experiência exclusiva em individualização. Equipe própria, seguro de obra e foco total em uma única especialidade.">
+<meta property="og:type" content="website">
+
+<link rel="preload" href="fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibmplexsans-var.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hidro Sul",
+  "description": "Especialistas em individualização de água e gás na Grande São Paulo",
+  "foundingDate": "2005",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Grande São Paulo"
+  },
+  "telephone": "+5511983428297",
+  "email": "caio@hidro-sul.com"
+}
+</script>
+
+<style>
+:root {
+  --navy-deep: #0f1d35;
+  --navy: #1a2942;
+  --navy-light: #2a3a55;
+  --silver: #c5cdd6;
+  --silver-soft: #e8edf3;
+  --white: #ffffff;
+  --green: #25D366;
+  --green-dark: #1aa84d;
+  --green-soft: #e8f9ee;
+  --danger: #c0392b;
+  --danger-soft: #fdecea;
+  --gray-50: #f7f8fa;
+  --gray-100: #eef0f3;
+  --gray-200: #d8dde4;
+  --gray-400: #8a93a0;
+  --gray-700: #404956;
+  --gray-900: #1a1f28;
+  --border: rgba(15, 29, 53, 0.08);
+  --chibo-green: #25d366;
+  --chibo-green-glow: rgba(37, 211, 102, 0.35);
+  --ig-pink: #d62977;
+  --ig-pink-glow: rgba(214, 41, 119, 0.4);
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --container: 1240px;
+  --radius: 4px;
+  --radius-lg: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--gray-900);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+/* === HEADER === */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--navy-deep);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.logo-mark {
+  width: 28px;
+  height: 28px;
+  background: var(--navy-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 2px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-link:hover { color: var(--navy-deep); }
+.nav-link.active { color: var(--navy-deep); font-weight: 600; }
+.nav-link.has-dropdown::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  opacity: 0.5;
+  transition: transform 0.2s;
+}
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-item[data-open="true"] .nav-link.has-dropdown::after { transform: rotate(180deg); }
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  min-width: 280px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 32px rgba(15, 29, 53, 0.08), 0 2px 8px rgba(15, 29, 53, 0.04);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  z-index: 110;
+}
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+}
+.nav-item:hover .nav-dropdown,
+.nav-item[data-open="true"] .nav-dropdown,
+.nav-dropdown:focus-within {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 14px;
+  pointer-events: none;
+}
+.nav-item:hover::after { pointer-events: auto; }
+.nav-dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--navy-deep);
+  transition: background 0.15s;
+}
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus-visible {
+  background: var(--gray-50);
+  outline: none;
+}
+.nav-dropdown-item.featured {
+  background: var(--navy-deep);
+  color: white;
+}
+.nav-dropdown-item.featured:hover,
+.nav-dropdown-item.featured:focus-visible { background: var(--navy); }
+.nav-dropdown-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+}
+.nav-dropdown-item.featured .nav-dropdown-icon {
+  background: rgba(37, 211, 102, 0.15);
+  color: var(--green);
+}
+.nav-dropdown-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.nav-dropdown-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.nav-dropdown-desc { font-size: 12px; color: var(--gray-400); line-height: 1.4; }
+.nav-dropdown-item.featured .nav-dropdown-desc { color: var(--silver); }
+.nav-dropdown-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 6px;
+  background: var(--green);
+  color: var(--navy-deep);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+/* === BOTÕES === */
+.btn-primary {
+  background: var(--green);
+  color: var(--navy-deep);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--green-dark); color: white; transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent;
+  color: var(--silver-soft);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.5); }
+
+/* === BREADCRUMB === */
+.breadcrumb {
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  font-size: 13px;
+  color: var(--gray-400);
+}
+.breadcrumb-list a {
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb-list a:hover { color: var(--navy-deep); }
+.breadcrumb-list .separator { color: var(--gray-200); }
+.breadcrumb-list .current { color: var(--navy-deep); font-weight: 500; }
+
+/* === PAGE HERO === */
+.page-hero {
+  background: var(--navy-deep);
+  color: white;
+  padding: 80px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 60%;
+  height: 100%;
+  background:
+    linear-gradient(135deg, transparent 0%, transparent 49%, rgba(255,255,255,0.015) 50%, transparent 51%),
+    repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(197, 205, 214, 0.03) 80px, rgba(197, 205, 214, 0.03) 81px),
+    repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(197, 205, 214, 0.03) 80px, rgba(197, 205, 214, 0.03) 81px);
+  pointer-events: none;
+}
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+.page-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--silver);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+}
+.page-hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--silver); }
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: white;
+  margin-bottom: 24px;
+}
+.page-hero h1 .accent { color: var(--green); }
+.page-hero-lead {
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--silver);
+  max-width: 680px;
+}
+
+/* === SECTION BASE === */
+.section { padding: 100px 0; }
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+}
+.section-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--navy); }
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--navy-deep);
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+.section-subtitle {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--gray-700);
+  max-width: 700px;
+  margin-bottom: 56px;
+}
+
+/* === MANIFESTO === */
+.manifesto-section { padding: 100px 0; background: white; }
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+}
+.manifesto-label {
+  position: sticky;
+  top: 100px;
+}
+.manifesto-text p {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: var(--navy-deep);
+  margin-bottom: 28px;
+}
+.manifesto-text p:last-child { margin-bottom: 0; }
+.manifesto-text p .highlight {
+  background: linear-gradient(180deg, transparent 60%, rgba(37, 211, 102, 0.25) 60%);
+  padding: 0 2px;
+}
+.manifesto-text p.tight {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  letter-spacing: 0;
+}
+
+/* === TIMELINE === */
+.timeline-section {
+  background: var(--gray-50);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.timeline {
+  position: relative;
+  margin-top: 24px;
+  padding-left: 32px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--gray-200);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 48px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--navy-deep);
+}
+.timeline-item.featured::before {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.15);
+}
+.timeline-year {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--green-dark);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+.timeline-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.015em;
+  color: var(--navy-deep);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.timeline-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  max-width: 580px;
+}
+
+/* === NUMBERS === */
+.numbers-section { background: var(--navy-deep); color: white; }
+.numbers-section .section-eyebrow { color: var(--green); }
+.numbers-section .section-eyebrow::before { background: var(--green); }
+.numbers-section .section-title { color: white; }
+.numbers-section .section-subtitle { color: var(--silver); }
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.number-card {
+  padding: 40px 28px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.number-card:nth-child(4n) { border-right: none; }
+.number-value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(40px, 4vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: white;
+  margin-bottom: 12px;
+}
+.number-value .unit {
+  font-size: 0.5em;
+  color: var(--silver);
+  font-weight: 600;
+  margin-left: 4px;
+}
+.number-label {
+  font-size: 14px;
+  color: var(--silver);
+  line-height: 1.5;
+}
+
+/* === HOW WE OPERATE === */
+.operate-section { background: white; }
+.operate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+.operate-card {
+  background: var(--gray-50);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  transition: all 0.3s;
+}
+.operate-card:hover { border-color: var(--navy); transform: translateY(-2px); }
+.operate-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius);
+  background: var(--navy-deep);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.operate-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.015em;
+  color: var(--navy-deep);
+  margin-bottom: 12px;
+}
+.operate-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  margin-bottom: 24px;
+}
+.operate-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.operate-list li {
+  font-size: 14px;
+  color: var(--gray-700);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 0;
+}
+.operate-list li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--green-dark);
+}
+
+/* === COMMITMENT === */
+.commitment-section { background: var(--gray-50); border-top: 1px solid var(--border); }
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+.commitment-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+}
+.commitment-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--green-dark);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.commitment-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.015em;
+  color: var(--navy-deep);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.commitment-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+/* === CTA FINAL === */
+.cta-section {
+  background: var(--navy-deep);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 50%;
+  height: 100%;
+  background: repeating-linear-gradient(135deg, transparent, transparent 100px, rgba(37, 211, 102, 0.04) 100px, rgba(37, 211, 102, 0.04) 101px);
+  pointer-events: none;
+}
+.cta-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.cta-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: white;
+  margin-bottom: 20px;
+}
+.cta-title .accent { color: var(--green); }
+.cta-subtitle {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--silver);
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+.cta-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  backdrop-filter: blur(12px);
+}
+.cta-card-eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+.cta-card-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 4px;
+  letter-spacing: -0.015em;
+}
+.cta-card-role {
+  font-size: 14px;
+  color: var(--silver);
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.cta-contact { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.cta-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--silver-soft);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.cta-contact-item:hover { color: var(--green); }
+.cta-contact-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--silver);
+}
+.cta-card .btn-primary { width: 100%; justify-content: center; padding: 14px 24px; }
+
+/* === FOOTER === */
+.footer { background: #0a1424; color: var(--silver); padding: 60px 0 32px; font-size: 14px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-brand .logo { color: white; margin-bottom: 16px; }
+.footer-tagline { font-size: 14px; color: var(--silver); line-height: 1.6; max-width: 280px; }
+.footer-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: white;
+  margin-bottom: 20px;
+}
+.footer-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-list a { color: var(--silver); text-decoration: none; transition: color 0.2s; font-size: 13px; }
+.footer-list a:hover { color: white; }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--gray-400);
+}
+.footer-signature {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--gray-400);
+}
+.footer-signature-label { color: var(--silver); font-weight: 400; }
+.footer-signature a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--silver-soft);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: transparent;
+  font-weight: 500;
+}
+.footer-signature a:hover { transform: translateY(-1px); background: rgba(255,255,255,0.03); }
+.footer-signature a.is-chibo:hover {
+  color: var(--chibo-green);
+  border-color: rgba(37, 211, 102, 0.4);
+  box-shadow: 0 0 12px var(--chibo-green-glow);
+}
+.footer-signature a.is-chibo .chibo-monogram {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-signature a.is-chibo .chibo-dot { color: var(--chibo-green); transition: filter 0.3s ease; }
+.footer-signature a.is-chibo:hover .chibo-dot { filter: drop-shadow(0 0 4px var(--chibo-green-glow)); }
+.footer-signature a.is-ig:hover { color: var(--ig-pink); border-color: rgba(214, 41, 119, 0.4); }
+.footer-signature a.is-ig:hover .ig-icon { filter: drop-shadow(0 0 6px var(--ig-pink-glow)); }
+.footer-signature .ig-icon { transition: filter 0.3s ease; }
+.footer-signature-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.12); flex-shrink: 0; }
+
+/* === WHATSAPP FLOAT === */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  z-index: 99;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 28px; height: 28px; fill: white; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .manifesto-grid,
+  .operate-grid,
+  .cta-inner,
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .manifesto-label { position: static; }
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .number-card:nth-child(2n) { border-right: none; }
+  .commitment-grid { grid-template-columns: 1fr; }
+  .section { padding: 64px 0; }
+  .page-hero { padding: 60px 0 70px; }
+}
+
+/* ===== HEADER · Contato em destaque + navegação responsiva ===== */
+.nav-dropdown::before { display: none; }
+.nav-cta {
+  font-family: var(--font-body); font-weight: 600; font-size: 14px;
+  color: var(--navy-deep); background: var(--green);
+  padding: 10px 20px; border-radius: var(--radius); text-decoration: none;
+  white-space: nowrap; transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.nav-cta:hover { background: var(--green-dark); color: var(--white); transform: translateY(-1px); }
+.nav-link:focus-visible, .nav-cta:focus-visible,
+.nav-dropdown-item:focus-visible, .nav-toggle:focus-visible {
+  outline: 2px solid var(--navy); outline-offset: 3px; border-radius: 2px;
+}
+.nav-toggle {
+  display: none; width: 44px; height: 44px; margin: -6px 0; padding: 0;
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  background: none; border: none; cursor: pointer;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 2px; border-radius: 2px;
+  background: var(--navy-deep); transition: transform 0.25s ease, opacity 0.2s ease;
+}
+@media (max-width: 900px) {
+  .header { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .logo, .nav-toggle { position: relative; z-index: 96; }
+  .header-inner { padding: 14px 0; }
+  .nav-toggle { display: flex; }
+  .hs-nav-open { overflow: hidden; }
+  .nav {
+    display: flex; position: fixed; inset: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--white); padding: 84px 24px 40px;
+    overflow-y: auto; z-index: 95;
+    transform: translateX(100%); visibility: hidden;
+    transition: transform 0.3s ease, visibility 0s linear 0.3s;
+  }
+  .hs-nav-open .nav {
+    transform: translateX(0); visibility: visible;
+    transition: transform 0.3s ease, visibility 0s;
+  }
+  .hs-nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hs-nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .hs-nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-link {
+    padding: 15px 4px; font-size: 16px; color: var(--navy-deep);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-item { display: block; }
+  .nav-item .nav-link.has-dropdown { display: block; }
+  .nav-dropdown {
+    position: static; transform: none;
+    opacity: 1; visibility: visible; pointer-events: auto;
+    width: auto; min-width: 0; padding: 4px 0 14px;
+    background: transparent; border: none; box-shadow: none;
+  }
+  .nav-dropdown-item { padding: 12px; }
+  .nav-dropdown-item.featured { background: var(--gray-50); color: var(--navy-deep); }
+  .nav-dropdown-item.featured .nav-dropdown-icon { background: var(--gray-100); color: var(--navy); }
+  .nav-dropdown-item.featured .nav-dropdown-desc { color: var(--gray-400); }
+  .nav-cta { margin-top: 20px; text-align: center; padding: 15px 20px; font-size: 15px; }
+}
+
+/* ===== Fontes self-hosted (variáveis) ===== */
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/archivo-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:100 700;font-display:swap;src:url('fonts/ibmplexsans-var.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+/* ===== Contraste (WCAG AA) ===== */
+:root { --gray-400: #5f6775; }
+.footer-bottom, .footer-signature, .aside-channel-label { color: #8a93a0; }
+.breadcrumb-list .separator { color: var(--gray-400); }
+.legal-block a, .faq-a a, .form-note a, .tech-card-tag,
+.timeline-year, .faq-q::after, .commitment-number,
+.faq-q:hover, .legal-toc-list a:hover { color: #15722f; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">H</span>
+        HIDRO SUL
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="quem-somos.html" class="nav-link active">Quem somos</a>
+        <div class="nav-item" data-dropdown>
+          <a href="individualizacao-agua-gas.html" class="nav-link has-dropdown" aria-haspopup="true" aria-expanded="false" id="services-trigger">Serviços</a>
+          <div class="nav-dropdown" role="menu" aria-labelledby="services-trigger">
+            <a href="individualizacao-agua-gas.html" class="nav-dropdown-item featured" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Individualização de água e gás<span class="nav-dropdown-badge">Principal</span></span>
+                <span class="nav-dropdown-desc">Frente técnica especializada da Hidro Sul</span>
+              </span>
+            </a>
+            <a href="instalacao-predial.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7v14M21 7v14M6 11h.01M6 15h.01M6 19h.01M10 11h.01M10 15h.01M10 19h.01M14 11h.01M14 15h.01M14 19h.01M18 11h.01M18 15h.01M18 19h.01M5 7l7-4 7 4"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Instalação predial</span>
+                <span class="nav-dropdown-desc">Obras hidráulicas complementares</span>
+              </span>
+            </a>
+            <a href="reformas.html" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dropdown-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+              <span class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Reformas</span>
+                <span class="nav-dropdown-desc">Adequações em condomínios atendidos</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="parceiros.html" class="nav-link">Parceiros</a>
+        <a href="contato.html" class="nav-cta">Contato</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list">
+      <li><a href="index.html">Home</a></li>
+      <li class="separator">/</li>
+      <li class="current">Quem somos</li>
+    </ol>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-hero-eyebrow">A empresa por trás da instalação</div>
+      <h1>Engenharia de <span class="accent">individualização</span>. Duas décadas, uma única especialidade.</h1>
+      <p class="page-hero-lead">A Hidro Sul é uma empresa de execução técnica especializada em individualização de água e gás na Grande São Paulo. Nascemos com um foco e não saímos dele.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto-section">
+  <div class="container">
+    <div class="manifesto-grid">
+      <div class="manifesto-label">
+        <div class="section-eyebrow">Por que existimos</div>
+        <h2 class="section-title" style="font-size: 32px;">O que a gente faz, em uma frase.</h2>
+      </div>
+      <div class="manifesto-text">
+        <p>Existe um problema silencioso no mercado de medição: <span class="highlight">o melhor medidor do mundo não sobrevive a uma instalação amadora</span>.</p>
+        <p>A Hidro Sul foi criada para resolver isso. Não somos uma empreiteira que faz hidráulica entre outras coisas. Somos especialistas em uma única coisa: instalar sistemas de individualização de água e gás com o padrão técnico que produtos premium exigem.</p>
+        <p class="tight">Nossos parceiros são fabricantes de medidores, empresas de telemetria e construtoras que entendem que a entrega não termina na nota fiscal — termina quando o sistema opera sem falhas, o síndico está satisfeito e a marca não precisa apagar incêndio. É esse último quilômetro que a gente protege.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section timeline-section">
+  <div class="container">
+    <div class="section-eyebrow">Trajetória</div>
+    <h2 class="section-title">20 anos refinando uma única especialidade.</h2>
+    <p class="section-subtitle">Não somos aventureiros testando processos na obra do parceiro. Cada marco abaixo é um passo de consolidação técnica.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2005</div>
+        <h3 class="timeline-title">Fundação da Hidro Sul</h3>
+        <p class="timeline-text">Início das operações na Grande São Paulo com foco exclusivo em individualização de água em condomínios residenciais.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2010</div>
+        <h3 class="timeline-title">Estruturação da equipe própria</h3>
+        <p class="timeline-text">Transição completa de mão de obra terceirizada para quadro próprio CLT. Início do programa interno de treinamento técnico contínuo.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2014</div>
+        <h3 class="timeline-title">Expansão para individualização de gás</h3>
+        <p class="timeline-text">Incorporação da frente de gás canalizado, com domínio técnico em tubulação de cobre, PPR e multicamadas. Certificações específicas obtidas.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2018</div>
+        <h3 class="timeline-title">Parcerias com as principais marcas do setor</h3>
+        <p class="timeline-text">Consolidação como parceira oficial de execução de marcas líderes de medição: Techem, MJ, Laager e Aquamed.</p>
+      </div>
+      <div class="timeline-item featured">
+        <div class="timeline-year">Hoje</div>
+        <h3 class="timeline-title">Mais de 300 mil medidores instalados</h3>
+        <p class="timeline-text">Operação madura, cobertura completa da Grande São Paulo, equipe estável, seguro de obra ativo e zero diluição de foco. A mesma especialidade desde o primeiro dia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="section numbers-section">
+  <div class="container">
+    <div class="section-eyebrow">Operação em números</div>
+    <h2 class="section-title">Escala que comprova o método.</h2>
+    <p class="section-subtitle">Os indicadores que importam para quem precisa de um parceiro técnico confiável.</p>
+
+    <div class="numbers-grid">
+      <div class="number-card">
+        <div class="number-value">20<span class="unit">anos</span></div>
+        <div class="number-label">de operação contínua em individualização</div>
+      </div>
+      <div class="number-card">
+        <div class="number-value">300<span class="unit">mil+</span></div>
+        <div class="number-label">medidores instalados em condomínios e empreendimentos</div>
+      </div>
+      <div class="number-card">
+        <div class="number-value">100<span class="unit">%</span></div>
+        <div class="number-label">de equipe própria CLT, sem terceirização</div>
+      </div>
+      <div class="number-card">
+        <div class="number-value">4<span class="unit">marcas</span></div>
+        <div class="number-label">de medição parceiras na Grande São Paulo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE OPERATE -->
+<section class="section operate-section">
+  <div class="container">
+    <div class="section-eyebrow">Modelo operacional</div>
+    <h2 class="section-title">Como blindamos a sua obra.</h2>
+    <p class="section-subtitle">Duas decisões estruturais que diferenciam a Hidro Sul de qualquer empreiteiro generalista do mercado.</p>
+
+    <div class="operate-grid">
+      <div class="operate-card">
+        <div class="operate-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="operate-title">Equipe própria CLT</h3>
+        <p class="operate-text">Zero terceirização em frente técnica. Cada instalador da Hidro Sul é funcionário CLT, fardado, com EPI completo e treinamento contínuo nas melhores práticas do mercado.</p>
+        <ul class="operate-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Contratação direta, sem intermediário de mão de obra
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Treinamento técnico interno em ciclos regulares
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Baixa rotatividade, alta padronização de execução
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            EPI rigoroso e protocolo de segurança em todas as obras
+          </li>
+        </ul>
+      </div>
+
+      <div class="operate-card">
+        <div class="operate-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="operate-title">Seguro de obra ativo</h3>
+        <p class="operate-text">Toda obra executada pela Hidro Sul é coberta por seguro de responsabilidade civil. O risco é nosso, não do parceiro nem do condomínio. Blindagem jurídica real, não promessa contratual.</p>
+        <ul class="operate-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Cobertura por apólice de responsabilidade civil
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Suporte em eventuais ocorrências sem ônus para o parceiro
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Documentação completa disponível por demanda
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Resposta a sinistros em prazos contratuais claros
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENT -->
+<section class="section commitment-section">
+  <div class="container">
+    <div class="section-eyebrow">Compromisso técnico</div>
+    <h2 class="section-title">Três princípios que não negociamos.</h2>
+    <p class="section-subtitle">Padrões internos que garantem que cada obra termina com sistema funcionando — e o nome da sua marca preservado.</p>
+
+    <div class="commitment-grid">
+      <div class="commitment-card">
+        <div class="commitment-number">01</div>
+        <h3 class="commitment-title">Precisão projetada</h3>
+        <p class="commitment-text">Geometria de montagem, espaçamento e alinhamento de tubulação seguem padrão técnico desde a primeira execução. Sem improviso, sem ajustes no caminho.</p>
+      </div>
+      <div class="commitment-card">
+        <div class="commitment-number">02</div>
+        <h3 class="commitment-title">Testes antes da entrega</h3>
+        <p class="commitment-text">Nenhuma obra é entregue sem bateria completa de testes de pressão, vedação e operação. Se algo precisa ser corrigido, é antes do síndico assinar — não depois.</p>
+      </div>
+      <div class="commitment-card">
+        <div class="commitment-number">03</div>
+        <h3 class="commitment-title">Limpeza pós-obra</h3>
+        <p class="commitment-text">Shafts limpos, organização visual impecável, zero resíduo de execução. A estética da instalação é parte da entrega, não um extra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta" class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <h2 class="cta-title">Pronto para uma <span class="accent">conversa técnica</span>?</h2>
+        <p class="cta-subtitle">Se você representa uma marca de medição, uma construtora ou um administrador de condomínios na Grande São Paulo, vale uma conversa direta sem rodeios comerciais.</p>
+        <a href="https://wa.me/5511983428297" class="btn-primary" style="padding: 14px 24px; font-size: 15px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Conversar pelo WhatsApp
+        </a>
+      </div>
+
+      <div class="cta-card">
+        <div class="cta-card-eyebrow">Contato direto</div>
+        <div class="cta-card-name">Caio Vital</div>
+        <div class="cta-card-role">Parcerias comerciais · Grande SP</div>
+
+        <div class="cta-contact">
+          <a href="tel:+5511983428297" class="cta-contact-item">
+            <span class="cta-contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span>11 98342-8297</span>
+          </a>
+          <a href="mailto:caio@hidro-sul.com" class="cta-contact-item">
+            <span class="cta-contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span>caio@hidro-sul.com</span>
+          </a>
+        </div>
+
+        <a href="https://wa.me/5511983428297" class="btn-primary">
+          <span>WhatsApp direto</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">H</span>
+          HIDRO SUL
+        </a>
+        <p class="footer-tagline">A base sólida para a sua tecnologia. Especialistas em individualização de água e gás na Grande São Paulo.</p>
+      </div>
+      <div>
+        <h4 class="footer-title">Serviços</h4>
+        <ul class="footer-list">
+          <li><a href="individualizacao-agua-gas.html">Individualização de água</a></li>
+          <li><a href="individualizacao-agua-gas.html">Individualização de gás</a></li>
+          <li><a href="instalacao-predial.html">Instalação predial</a></li>
+          <li><a href="reformas.html">Reformas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Empresa</h4>
+        <ul class="footer-list">
+          <li><a href="quem-somos.html">Quem somos</a></li>
+          <li><a href="parceiros.html">Parceiros</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-title">Contato</h4>
+        <ul class="footer-list">
+          <li><a href="tel:+5511983428297">11 98342-8297</a></li>
+          <li><a href="mailto:caio@hidro-sul.com">caio@hidro-sul.com</a></li>
+          <li>Grande São Paulo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Hidro Sul. Todos os direitos reservados. · <a href="politica-de-privacidade.html" style="color: var(--silver); text-decoration: none;">Política de Privacidade</a> · <a href="politica-de-cookies.html" style="color: var(--silver); text-decoration: none;">Política de Cookies</a> · <a href="termos-de-uso.html" style="color: var(--silver); text-decoration: none;">Termos de Uso</a></span>
+      <div class="footer-signature">
+        <span class="footer-signature-label">Desenvolvido por</span>
+        <a href="https://chibodev.com" target="_blank" rel="noopener" class="is-chibo">
+          <span class="chibo-monogram">C<span class="chibo-dot">.</span></span>
+          <span>Chibo Dev</span>
+        </a>
+        <span class="footer-signature-divider"></span>
+        <a href="https://instagram.com/chibodev" target="_blank" rel="noopener" class="is-ig" aria-label="Instagram Chibo Dev">
+          <svg class="ig-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>@chibodev</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5511983428297" class="wa-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  (function() {
+    const dropdowns = document.querySelectorAll('[data-dropdown]');
+    dropdowns.forEach(function(item) {
+      const trigger = item.querySelector('.nav-link.has-dropdown');
+      if (!trigger) return;
+      trigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isOpen = item.getAttribute('data-open') === 'true';
+        closeAll();
+        if (!isOpen) {
+          item.setAttribute('data-open', 'true');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+      trigger.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.setAttribute('data-open', 'true');
+          trigger.setAttribute('aria-expanded', 'true');
+          const firstItem = item.querySelector('.nav-dropdown-item');
+          if (firstItem) firstItem.focus();
+        }
+      });
+    });
+    function closeAll() {
+      dropdowns.forEach(function(item) {
+        item.setAttribute('data-open', 'false');
+        const trigger = item.querySelector('.nav-link.has-dropdown');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeAll();
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('[data-dropdown]')) closeAll();
+    });
+  })();
+</script>
+
+<script src="cookie-consent.js" defer></script>
+</body>
+</html>
