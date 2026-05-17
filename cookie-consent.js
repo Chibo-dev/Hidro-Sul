@@ -124,6 +124,7 @@
       '.hs-cc-prefs-link{background:none;border:none;padding:0;margin:0;' +
         "font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:12px;color:#c5cdd6;cursor:pointer;}" +
       '.hs-cc-prefs-link:hover{color:#fff;}' +
+      '.footer-bottom span a,.footer-bottom span button{display:inline-block;padding:8px 10px;}' +
       '@media (max-width:720px){' +
         '.hs-cc-banner-inner{flex-direction:column;align-items:stretch;gap:16px;}' +
         '.hs-cc-banner-actions{flex-direction:column;}' +
